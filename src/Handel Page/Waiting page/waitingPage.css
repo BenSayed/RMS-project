@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --coler_1: #151716;
+  --coler_2: #ff9500;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+   text-align: center;
+   color: #fff;
+  display: flex;
+  justify-content: coulem;
+  align-items: center;
+   flex-direction: column;
+}
+
+.title {
+    font-family: "Cormorant Upright", serif;
+
+  font-size: 48px;
+  color: var(--coler_2);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: "Cormorant Upright", serif;
+
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 40px;
+  font-family: "Arial", sans-serif;
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.email-section {
+  display: flex;
+  flex-direction: center; /* ضع العناصر تحت بعضها */
+  gap: -50px; /* مسافة بين العناصر */
+}
+
+.sub_contener {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  height: 100vh;
+}
+
+

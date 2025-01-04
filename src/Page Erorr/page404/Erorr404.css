@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --coler_1: #151716;
+  --coler_2: #ff9500;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--coler_1);
+}
+.img1 {
+  width: 100%;
+  margin: 0 auto;
+
+  height: 590.6px;
+  object-fit: cover;
+  border-radius: 8px;
+
+  position: absolute;
+}
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.error-content {
+  text-align: center;
+}
+
+.error-number {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-top: -2rem;
+}
+
+.number {
+  font-size: 30rem;
+  font-weight: bold;
+  color: var(--coler_2);
+  font-family: "Cormorant Upright", serif;
+}
+
+.burger-space {
+  width: 5rem;
+}
+
+.button1 {
+  background-color: var(--coler_2);
+}
+.masseg p,
+h1 {
+  color: white;
+  font-family: "Cormorant Upright", serif;
+}
