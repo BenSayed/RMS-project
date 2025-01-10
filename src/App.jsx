@@ -7,10 +7,10 @@ function App() {
  
   return (
     <>
+      <Countact />
       {/* <WaitingPage/> */}
       {/* <PageErorr500/> */}
       {/* <Erorr404/> */}
-      <Countact />
     </>
   );
 }
