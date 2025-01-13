@@ -1,0 +1,364 @@
+.sectionlogin {
+  height: 650px;
+}
+
+.PageLogin {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.PageLogincontainer {
+  display: flex;
+  width: 94%;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 33px;
+  overflow: hidden;
+  background-color: #fff4e6;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.PageLoginform-section {
+  position: relative;
+
+  padding: 70px;
+  flex: 0.8;
+  gap: 38px;
+}
+
+.PageLoginform-section h1 {
+  font-size: 64px;
+  margin-bottom: 8px;
+  color: #151716;
+}
+
+p {
+  padding-bottom: 20px;
+}
+
+.PageLoginform-section a {
+  color: #ff9500;
+  text-decoration: none;
+  border-bottom: 2px solid #ff9500;
+  padding-bottom: 0.2px;
+}
+
+.PageLoginform-section input[type="email"],
+.PageLoginform-section input[type="password"] {
+  width: 520px;
+  height: 52px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ff9500;
+  border-radius: 16px;
+  font-size: 16px;
+  position: relative;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+}
+
+.password-container .eye-icon {
+  position: absolute;
+  top: 27px;
+  right: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.eye-icon {
+  cursor: pointer;
+}
+
+.PageLoginform-section .remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.PageLoginform-section .remember input[type="checkbox"] {
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: 2px solid #ff9500;
+  border-radius: 4px;
+  appearance: none;
+  outline: none;
+}
+
+.remember input[type="checkbox"]:checked {
+  background-color: #ff9500;
+  border-color: #ff9500;
+}
+
+.remember input[type="checkbox"]:hover {
+}
+
+.PageLoginform-section button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff9500;
+  color: #787373;
+  border-radius: 60px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.PageLoginform-section button:hover {
+  background-color: #efc96d;
+}
+
+.PageLoginform-section .social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.social-buttons button {
+  flex: 1;
+  margin: 0 12px;
+  padding: 15px 20px;
+  border: 1px solid #ff9500;
+  background-color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 247px;
+  height: 52px;
+}
+
+.social-buttons button img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+  position: relative;
+  top: 0px;
+}
+
+.PageLoginform-section .login-btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 59px;
+  padding: 12px;
+  background-color: #ff9500;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PageLoginform-section.login-btn img {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+
+.PageLoginform-section .login-btn:hover {
+  background-color: #e65a00;
+}
+
+.image-section0 img {
+  position: relative;
+  align-items: end;
+  left: -18.5rem;
+  bottom: 0.3rem;
+  width: 1110px;
+  height: 580px;
+  gap: 0px;
+  border-radius: 48px;
+  opacity: 0px;
+  background-size: cover;
+  background-position: center;
+}
+
+.lineDive {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.lineDive img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.lineDive h3 {
+  font-size: 16px;
+  font-family: "Inter", serif;
+  color: #151716d3;
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+  .PageLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .image-section0 img {
+    position: relative;
+    top: 600px;
+    left: -56rem;
+    height: 500px;
+  }
+
+  .sectionlogin {
+    height: 1230px;
+  }
+  .PageLogincontainer {
+    position: relative;
+    top: 20rem;
+    height: 1130px;
+  }
+  .PageLoginform-section {
+    position: relative;
+
+    display: block;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 680px) {
+  .PageLoginform-section input[type="email"],
+  .PageLoginform-section input[type="password"] {
+    width: 330px;
+    height: 52px;
+  }
+  .PageLoginform-section {
+    position: relative;
+   
+  }
+  .image-section0 img {
+    display: none;
+  }
+
+  .PageLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: -17rem;
+  }
+
+  .PageLogincontainer {
+    position: relative;
+    top: 20rem;
+    height: 650px;
+  }
+  .sectionlogin {
+    height: 700px;
+  }
+
+  .PageLoginform-section .remember input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .lineDive {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .lineDive img {
+    width: 180px;
+    height: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .lineDive h3 {
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    font-family: "Inter", serif;
+    color: #151716d3;
+  }
+  .PageLoginform-section button {
+    width: 140px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+  
+@media (max-width: 482px) {
+  .PageLoginform-section input[type="email"],
+  .PageLoginform-section input[type="password"] {
+    width: 280px;
+    height: 52px;
+  }
+  .PageLoginform-section {
+    position: relative;
+   
+  }
+  .image-section0 img {
+    display: none;
+  }
+
+  .PageLoginform-section button {
+    width: 120px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .PageLoginform-section h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    color: #151716;
+  }
+
+  p {
+    font-size: 15px;
+
+    padding-bottom: 20px;
+  }
+
+  .PageLoginform-section a {
+    color: #ff9500;
+    text-decoration: none;
+    border-bottom: 2px solid #ff9500;
+    padding-bottom: 0.2px;
+  }
+  .sectionlogin {
+    padding: 10px;
+  }
+
+
+ 
+
+  .lineDive img {
+    width: 110px;
+    height: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+ 
+}
