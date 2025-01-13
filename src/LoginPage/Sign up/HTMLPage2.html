@@ -1,0 +1,1242 @@
+﻿<!--<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم تسجيل الدخول</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* تنسيق الصفحة العامة */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        /* تنسيق الحاوية الأساسية */
+        .container {
+            display: flex;
+            width: 92%;
+            height: 88%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 33px;
+            overflow: hidden;
+            background-color: #fff4e6;
+        }
+
+        .form-section {
+            position: relative;
+            left: -45px;
+            padding: 70px;
+            flex: 0.8;
+        }
+
+            .form-section h1 {
+                font-size: 32px;
+                margin-bottom: 8px;
+                color: Inter;
+            }
+
+            .form-section a {
+                color: #ff9500;
+                text-decoration: none;
+                border-bottom: 2px solid #ff9500;
+                padding-bottom: 0.2px;
+            }
+
+            .form-section input[type="email"],
+            .form-section input[type="password"] {
+                width: 480px;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ff9500;
+                border-radius: 15px;
+                font-size: 16px;
+                position: relative;
+            }
+
+        /* حقل كلمة المرور مع الأيقونة */
+        .password-container {
+            position: relative;
+        }
+
+            .password-container input {
+                width: 100%;
+            }
+
+            .password-container .eye-icon {
+                position: absolute;
+                top: 21px;
+                right: 10px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                width: 25px; /* حجم الصورة */
+                height: 25px; /* حجم الصورة */
+            }
+
+        .form-section .remember {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .form-section .remember input {
+                margin-right: 8px;
+            }
+
+        .form-section button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6b00;
+            color: #787373;
+            border-radius: 60px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .form-section button:hover {
+                background-color: #efc96d;
+            }
+
+        .form-section .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        /* تعديل الأزرار الخاصة بـ Google و Apple */
+        .social-buttons button {
+            flex: 1;
+            margin: 0 12px;
+            padding: 15px 20px; /* تكبير الحشو */
+            border: 1px solid #ff9500; /* تعديل سمك البوردر */
+            background-color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center; /* لضبط الأيقونات والنصوص */
+            justify-content: center; /* لضبط الأيقونات والنصوص */
+            width: 22px; /* عرض الزر */
+            height: 40px; /* ارتفاع الزر */
+        }
+
+
+            /* إضافة صور الأزرار */
+            .social-buttons button img {
+                width: 20px; /* عرض الصورة */
+                height: 20px; /* ارتفاع الصورة */
+                margin-left: 10px; /* مسافة بين الصورة والنص */
+                margin-right: 5px;
+                position: relative; /* لتحديد موضع الصورة بشكل مرن */
+                top: 0px; /* التحكم في إزاحة الصورة عمودياً */
+            }
+
+        /* إضافة مسافة بين أزرار Google و Apple وزر "Login" */
+        .form-section .login-btn {
+            margin-top: 20px; /* مسافة بين الأزرار وزر تسجيل الدخول */
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center; /* توسيط النص والأيقونة */
+            align-items: center; /* توسيط النص والأيقونة عموديًا */
+        }
+
+
+
+
+            .or-login::before,
+            .or-login::after {
+                content: ""; /* محتوى الخط */
+                flex: 1; /* توسيع الخط */
+                height: 1px; /* ارتفاع الخط */
+                background: #ccc; /* لون الخط */
+                margin: 0 10px; /* مسافة بين النص والخط */
+            }
+
+
+            .form-section .or-login span.circle {
+                width: 10px;
+                height: 10px;
+                background-color: #666;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+
+            .form-section .login-btn img {
+                width: 20px; /* عرض الأيقونة */
+                height: 20px; /* ارتفاع الأيقونة */
+                margin-left: 10px; /* مسافة بين الأيقونة والنص */
+            }
+
+            .form-section .login-btn:hover {
+                background-color: #e65a00;
+            }
+
+        .image-section {
+            flex: 1.9;
+            background-image: url('Rectangle C.svg');
+            background-size: cover;
+            background-position: center;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            width: 140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1 style="font-family: 'Cormorant Upright';font-size:50px">Welcome again!</h1>
+            <p>Don’t have an account? <a href="#">Sign up</a></p>
+            <input type="email" placeholder="Email">
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password">
+                <img class="eye-icon" src="mdi_eye-outline.svg" alt="eye icon" onclick="togglePassword()">
+            </div>
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+
+
+
+
+            <div class="or-login">
+                <span class="circle"></span>
+                <span>or login with</span>
+                <span class="circle"></span>
+            </div>-->
+<!-- استبدال زر "Login" بالأزرار الجديدة -->
+<!--<div class="social-buttons">
+    <button>
+
+        <img src="google .svg" alt="Google Icon">-->
+<!-- ضع رابط صورة Google هنا -->
+<!--Google
+</button>
+<button>
+
+    <img src="apple .svg" alt="Apple Icon">-->
+<!-- ضع رابط صورة Apple هنا -->
+<!--Apple
+    </button>
+</div>-->
+<!-- زر Login أسفل الأزرار مع أيقونة -->
+<!--<button class="login-btn">
+                Login
+
+            </button>
+        </div>
+
+        <div class="image-section"></div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById('password');
+            var type = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = type;
+        }
+    </script>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0; /* ضبط الحواف */
+            font-family: Arial, sans-serif; /* نوع الخط */
+            display: flex; /* جعل العناصر داخل الصفحة في وضع flex */
+            justify-content: center; /* توسيط المحتوى أفقيًا */
+            align-items: center; /* توسيط المحتوى عموديًا */
+            height: 100vh; /* جعل ارتفاع الصفحة بالكامل */
+            background-color: #f8f8f8; /* لون الخلفية */
+        }
+
+        .container {
+            display: flex; /* وضع flex للمحتويات الداخلية */
+            width: 90%; /* عرض الحاوية كنسبة مئوية */
+            max-width: 900px; /* أقصى عرض للحاوية */
+            background: #fff; /* لون خلفية الحاوية */
+            border-radius: 10px; /* زوايا مستديرة */
+            overflow: hidden; /* إخفاء الأجزاء التي تتجاوز الحدود */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* الظلال */
+        }
+
+        .form-section {
+            flex: 1; /* تخصيص المساحة المتاحة */
+            padding: 20px; /* الحشو الداخلي */
+            box-sizing: border-box; /* تضمين الحشو في الحساب */
+        }
+
+            .form-section h1 {
+                margin: 0 0 10px; /* ضبط الحواف العلوية والسفلية */
+                font-size: 28px; /* حجم الخط */
+                color: #333; /* لون النص */
+            }
+
+            .form-section p {
+                margin: 5px 0 20px; /* ضبط الحواف */
+                color: #666; /* لون النص */
+            }
+
+                .form-section p a {
+                    color: #ff6600; /* لون الرابط */
+                    text-decoration: none; /* إزالة الخط السفلي للرابط */
+                }
+
+            .form-section form {
+                display: flex; /* وضع flex للعناصر داخل النموذج */
+                flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+            }
+
+            .form-section input[type="email"],
+            .form-section .password-container {
+                position: relative; /* تحديد موقع العناصر بالنسبة للحاوية */
+                margin-bottom: 15px; /* حواف سفلية */
+            }
+
+            .form-section input[type="email"] {
+                padding: 10px; /* حشو داخلي */
+                border: 1px solid #ccc; /* إطار الحقل */
+                border-radius: 5px; /* زوايا مستديرة */
+                width: 100%; /* عرض كامل */
+                box-sizing: border-box; /* تضمين الحشو في الحساب */
+            }
+
+            .form-section .password-container input[type="password"] {
+                padding: 10px; /* حشو داخلي */
+                border: 1px solid #ccc; /* إطار الحقل */
+                border-radius: 5px; /* زوايا مستديرة */
+                width: 100%; /* عرض كامل */
+                box-sizing: border-box; /* تضمين الحشو في الحساب */
+                height: 50px; /* التحكم في الطول */
+            }
+
+            .form-section .password-container img {
+                position: absolute; /* تحديد الموضع بالنسبة للحاوية */
+                right: 10px; /* ضبط الموضع الأيمن */
+                top: 50%; /* ضبط الموضع العلوي */
+                transform: translateY(-50%); /* تعديل الموضع للتمركز عموديًا */
+                width: 20px; /* عرض الصورة */
+                height: 20px; /* ارتفاع الصورة */
+                cursor: pointer; /* تغيير المؤشر عند التمرير */
+            }
+
+            .form-section .remember {
+                display: flex; /* وضع flex للعناصر */
+                align-items: center; /* محاذاة عمودية للعناصر */
+                margin-bottom: 15px; /* حواف سفلية */
+            }
+
+                .form-section .remember input {
+                    margin-right: 10px; /* مسافة بين المربع والنص */
+                }
+
+            .form-section button {
+                background-color: #ff6600; /* لون خلفية الزر */
+                color: white; /* لون النص */
+                border: none; /* إزالة الإطار */
+                padding: 10px; /* حشو داخلي */
+                border-radius: 5px; /* زوايا مستديرة */
+                cursor: pointer; /* تغيير المؤشر عند التمرير */
+                font-size: 16px; /* حجم النص */
+            }
+
+            .form-section .or-login {
+                display: flex; /* وضع flex للعناصر */
+                align-items: center; /* محاذاة عمودية */
+                justify-content: center; /* محاذاة أفقية */
+                margin: 20px 0; /* حواف علوية وسفلية */
+                color: #666; /* لون النص */
+            }
+
+                .form-section .or-login::before,
+                .form-section .or-login::after {
+                    content: ""; /* محتوى الخط */
+                    flex: 1; /* توسيع الخط */
+                    height: 1px; /* ارتفاع الخط */
+                    background: #ccc; /* لون الخط */
+                    margin: 0 10px; /* مسافة بين النص والخط */
+                }
+
+            .form-section .social-icons {
+                display: flex; /* وضع flex للعناصر */
+                justify-content: center; /* توسيط العناصر */
+                gap: 15px; /* مسافة بين الأيقونات */
+            }
+
+                .form-section .social-icons img {
+                    width: 40px; /* عرض الأيقونات */
+                    height: 40px; /* ارتفاع الأيقونات */
+                    cursor: pointer; /* تغيير المؤشر عند التمرير */
+                }
+
+        .image-section {
+            flex: 1; /* تخصيص المساحة المتاحة */
+            background-image: url('https://via.placeholder.com/500'); /* صورة افتراضية */
+            background-size: cover; /* تغطية كاملة للخلفية */
+            background-position: center; /* تمركز الصورة */
+        }
+
+        .lines-circles-container {
+            display: flex; /* وضع flex للعناصر */
+            justify-content: center; /* توسيط العناصر */
+            align-items: center; /* محاذاة العناصر عموديًا */
+            margin-top: 20px; /* مسافة أعلى */
+        }
+
+        .line {
+            width: 100px; /* عرض الخط */
+            height: 2px; /* ارتفاع الخط */
+            background-color: #666; /* لون الخط */
+            position: relative; /* الوضع النسبي */
+            margin: 0 10px; /* مسافة بين الخطوط */
+        }
+
+            .line::before, .line::after {
+                content: ""; /* المحتوى */
+                width: 10px; /* عرض الدائرة */
+                height: 10px; /* ارتفاع الدائرة */
+                background-color: #666; /* لون الدائرة */
+                border-radius: 50%; /* جعل العنصر دائريًا */
+                position: absolute; /* الوضع المطلق */
+            }
+
+            .line::before {
+                left: -5px; /* تموضع الدائرة اليسرى */
+                top: -4px; /* تعديل التمركز العمودي */
+            }
+
+            .line::after {
+                right: -5px; /* تموضع الدائرة اليمنى */
+                top: -4px; /* تعديل التمركز العمودي */
+            }
+    </style>
+</head>
+<body>
+    <div class="container">-->
+<!-- حاوية الصفحة الرئيسية -->
+<!--<div class="form-section">-->
+<!-- قسم النموذج -->
+<!--<h1>Welcome again!</h1>
+<p>Don't have an account? <a href="#">Sign up</a></p>
+<form>
+    <input type="email" placeholder="Email">-->
+<!-- حقل البريد الإلكتروني -->
+<!--<div class="password-container">-->
+<!-- حاوية كلمة المرور -->
+<!--<input type="password" placeholder="Password">--> <!-- حقل كلمة المرور -->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0; /* ضبط الحواف */
+            font-family: Arial, sans-serif; /* نوع الخط */
+            display: flex; /* جعل العناصر داخل الصفحة في وضع flex */
+            justify-content: center; /* توسيط المحتوى أفقيًا */
+            align-items: center; /* توسيط المحتوى عموديًا */
+            height: 100vh; /* جعل ارتفاع الصفحة بالكامل */
+            background-color: #f8f8f8; /* لون الخلفية */
+        }
+
+        .container {
+            display: flex; /* وضع flex للمحتويات الداخلية */
+            width: 90%; /* عرض الحاوية كنسبة مئوية */
+            max-width: 900px; /* أقصى عرض للحاوية */
+            background: #fff; /* لون خلفية الحاوية */
+            border-radius: 10px; /* زوايا مستديرة */
+            overflow: hidden; /* إخفاء الأجزاء التي تتجاوز الحدود */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* الظلال */
+        }
+
+        .form-section {
+            flex: 1; /* تخصيص المساحة المتاحة */
+            padding: 20px; /* الحشو الداخلي */
+            box-sizing: border-box; /* تضمين الحشو في الحساب */
+        }
+
+            .form-section h1 {
+                margin: 0 0 10px; /* ضبط الحواف العلوية والسفلية */
+                font-size: 28px; /* حجم الخط */
+                color: #333; /* لون النص */
+            }
+
+            .form-section p {
+                margin: 5px 0 20px; /* ضبط الحواف */
+                color: #666; /* لون النص */
+            }
+
+                .form-section p a {
+                    color: #ff6600; /* لون الرابط */
+                    text-decoration: none; /* إزالة الخط السفلي للرابط */
+                }
+
+            .form-section form {
+                display: flex; /* وضع flex للعناصر داخل النموذج */
+                flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+            }
+
+            .form-section input[type="email"],
+            .form-section .password-container {
+                position: relative; /* تحديد موقع العناصر بالنسبة للحاوية */
+                margin-bottom: 15px; /* حواف سفلية */
+            }
+
+            .form-section input[type="email"] {
+                padding: 10px; /* حشو داخلي */
+                border: 1px solid #ccc; /* إطار الحقل */
+                border-radius: 5px; /* زوايا مستديرة */
+                width: 100%; /* عرض كامل */
+                box-sizing: border-box; /* تضمين الحشو في الحساب */
+            }
+
+            .form-section .password-container input[type="password"] {
+                padding: 10px; /* حشو داخلي */
+                border: 1px solid #ccc; /* إطار الحقل */
+                border-radius: 5px; /* زوايا مستديرة */
+                width: 100%; /* عرض كامل */
+                box-sizing: border-box; /* تضمين الحشو في الحساب */
+                height: 50px; /* التحكم في الطول */
+            }
+
+            .form-section .password-container img {
+                position: absolute; /* تحديد الموضع بالنسبة للحاوية */
+                right: 10px; /* ضبط الموضع الأيمن */
+                top: 50%; /* ضبط الموضع العلوي */
+                transform: translateY(-50%); /* تعديل الموضع للتمركز عموديًا */
+                width: 20px; /* عرض الصورة */
+                height: 20px; /* ارتفاع الصورة */
+                cursor: pointer; /* تغيير المؤشر عند التمرير */
+            }
+
+            .form-section .remember {
+                display: flex; /* وضع flex للعناصر */
+                align-items: center; /* محاذاة عمودية للعناصر */
+                margin-bottom: 15px; /* حواف سفلية */
+            }
+
+                .form-section .remember input {
+                    margin-right: 10px; /* مسافة بين المربع والنص */
+                }
+
+            .form-section button {
+                background-color: #ff6600; /* لون خلفية الزر */
+                color: white; /* لون النص */
+                border: none; /* إزالة الإطار */
+                padding: 10px; /* حشو داخلي */
+                border-radius: 5px; /* زوايا مستديرة */
+                cursor: pointer; /* تغيير المؤشر عند التمرير */
+                font-size: 16px; /* حجم النص */
+            }
+
+            .form-section .or-login {
+                display: flex; /* وضع flex للعناصر */
+                align-items: center; /* محاذاة عمودية */
+                justify-content: center; /* محاذاة أفقية */
+                margin: 20px 0; /* حواف علوية وسفلية */
+                color: #666; /* لون النص */
+            }
+
+                .form-section .or-login::before,
+                .form-section .or-login::after {
+                    content: ""; /* محتوى الخط */
+                    flex: 1; /* توسيع الخط */
+                    height: 1px; /* ارتفاع الخط */
+                    background: #ccc; /* لون الخط */
+                    margin: 0 10px; /* مسافة بين النص والخط */
+                }
+
+            .form-section .social-icons {
+                display: flex; /* وضع flex للعناصر */
+                justify-content: center; /* توسيط العناصر */
+                gap: 15px; /* مسافة بين الأيقونات */
+            }
+
+                .form-section .social-icons img {
+                    width: 40px; /* عرض الأيقونات */
+                    height: 40px; /* ارتفاع الأيقونات */
+                    cursor: pointer; /* تغيير المؤشر عند التمرير */
+                }
+
+        .image-section {
+            flex: 1; /* تخصيص المساحة المتاحة */
+            background-image: url('https://via.placeholder.com/500'); /* صورة افتراضية */
+            background-size: cover; /* تغطية كاملة للخلفية */
+            background-position: center; /* تمركز الصورة */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">-->
+<!-- حاوية الصفحة الرئيسية -->
+<!--<div class="form-section">-->
+<!-- قسم النموذج -->
+<!--<h1>Welcome again!</h1>
+<p>Don't have an account? <a href="#">Sign up</a></p>
+<form>
+    <input type="email" placeholder="Email">-->
+<!-- حقل البريد الإلكتروني -->
+<!--<div class="password-container">-->
+<!-- حاوية كلمة المرور -->
+<!--<input type="password" placeholder="Password">--> <!-- حقل كلمة المرور -->
+<!--<img src="https://via.placeholder.com/20" alt="Toggle visibility">--> <!-- أيقونة التحكم بكلمة المرور -->
+<!--</div>
+<div class="remember">-->
+<!-- قسم التذكر -->
+<!--<input type="checkbox" id="remember">--> <!-- مربع التذكر -->
+<!--<label for="remember">Remember me</label>--> <!-- نص التذكر -->
+<!--</div>
+<button type="submit">Login</button>-->
+<!-- زر تسجيل الدخول -->
+<!--</form>
+<div class="or-login">or login with</div>-->
+<!-- نص أو تسجيل الدخول باستخدام -->
+<!--<div class="social-icons">-->
+<!-- أيقونات الشبكات الاجتماعية -->
+<!--<img src="https://via.placeholder.com/40?text=G" alt="Google">--> <!-- أيقونة Google -->
+<!--<img src="https://via.placeholder.com/40?text=A" alt="Apple">--> <!-- أيقونة Apple -->
+<!--</div>
+</div>
+<div class="image-section"></div>-->
+<!-- قسم الصورة -->
+<!--</div>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0; /* ضبط الحواف */
+            font-family: Arial, sans-serif; /* نوع الخط */
+            display: flex; /* جعل العناصر داخل الصفحة في وضع flex */
+            justify-content: center; /* توسيط المحتوى أفقيًا */
+            align-items: center; /* توسيط المحتوى عموديًا */
+            height: 100vh; /* جعل ارتفاع الصفحة بالكامل */
+            background-color: #f8f8f8; /* لون الخلفية */
+        }
+
+        .container {
+            display: flex; /* وضع flex للمحتويات الداخلية */
+            width: 90%; /* عرض الحاوية كنسبة مئوية */
+            max-width: 900px; /* أقصى عرض للحاوية */
+            background: #fff; /* لون خلفية الحاوية */
+            border-radius: 10px; /* زوايا مستديرة */
+            overflow: hidden; /* إخفاء الأجزاء التي تتجاوز الحدود */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* الظلال */
+        }
+
+        .form-section {
+            flex: 1; /* تخصيص المساحة المتاحة */
+            padding: 20px; /* الحشو الداخلي */
+            box-sizing: border-box; /* تضمين الحشو في الحساب */
+        }
+
+            .form-section h1 {
+                margin: 0 0 10px; /* ضبط الحواف العلوية والسفلية */
+                font-size: 28px; /* حجم الخط */
+                color: #333; /* لون النص */
+            }
+
+            .form-section p {
+                margin: 5px 0 20px; /* ضبط الحواف */
+                color: #666; /* لون النص */
+            }
+
+                .form-section p a {
+                    color: #ff6600; /* لون الرابط */
+                    text-decoration: none; /* إزالة الخط السفلي للرابط */
+                }
+
+            .form-section form {
+                display: flex; /* وضع flex للعناصر داخل النموذج */
+                flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+            }
+
+            .form-section input[type="email"],
+            .form-section .password-container {
+                position: relative; /* تحديد موقع العناصر بالنسبة للحاوية */
+                margin-bottom: 15px; /* حواف سفلية */
+            }
+
+            .form-section input[type="email"] {
+                padding: 10px; /* حشو داخلي */
+                border: 1px solid #ccc; /* إطار الحقل */
+                border-radius: 5px; /* زوايا مستديرة */
+                width: 100%; /* عرض كامل */
+                box-sizing: border-box; /* تضمين الحشو في الحساب */
+            }
+
+            .form-section .password-container input[type="password"] {
+                padding: 10px; /* حشو داخلي */
+                border: 1px solid #ccc; /* إطار الحقل */
+                border-radius: 5px; /* زوايا مستديرة */
+                width: 100%; /* عرض كامل */
+                box-sizing: border-box; /* تضمين الحشو في الحساب */
+                height: 50px; /* التحكم في الطول */
+            }
+
+            .form-section .password-container img {
+                position: absolute; /* تحديد الموضع بالنسبة للحاوية */
+                right: 10px; /* ضبط الموضع الأيمن */
+                top: 50%; /* ضبط الموضع العلوي */
+                transform: translateY(-50%); /* تعديل الموضع للتمركز عموديًا */
+                width: 20px; /* عرض الصورة */
+                height: 20px; /* ارتفاع الصورة */
+                cursor: pointer; /* تغيير المؤشر عند التمرير */
+            }
+
+            .form-section .remember {
+                display: flex; /* وضع flex للعناصر */
+                align-items: center; /* محاذاة عمودية للعناصر */
+                margin-bottom: 15px; /* حواف سفلية */
+            }
+
+                .form-section .remember input {
+                    margin-right: 10px; /* مسافة بين المربع والنص */
+                }
+
+            .form-section button {
+                background-color: #ff6600; /* لون خلفية الزر */
+                color: white; /* لون النص */
+                border: none; /* إزالة الإطار */
+                padding: 10px; /* حشو داخلي */
+                border-radius: 5px; /* زوايا مستديرة */
+                cursor: pointer; /* تغيير المؤشر عند التمرير */
+                font-size: 16px; /* حجم النص */
+            }
+
+            .form-section .or-login {
+                display: flex; /* وضع flex للعناصر */
+                align-items: center; /* محاذاة عمودية */
+                justify-content: center; /* محاذاة أفقية */
+                margin: 20px 0; /* حواف علوية وسفلية */
+                color: #666; /* لون النص */
+            }
+
+                .form-section .or-login::before,
+                .form-section .or-login::after {
+                    content: ""; /* محتوى الخط */
+                    flex: 1; /* توسيع الخط */
+                    height: 1px; /* ارتفاع الخط */
+                    background: #ccc; /* لون الخط */
+                    margin: 0 10px; /* مسافة بين النص والخط */
+                }
+
+            .form-section .social-icons {
+                display: flex; /* وضع flex للعناصر */
+                justify-content: center; /* توسيط العناصر */
+                gap: 15px; /* مسافة بين الأيقونات */
+            }
+
+                .form-section .social-icons img {
+                    width: 40px; /* عرض الأيقونات */
+                    height: 40px; /* ارتفاع الأيقونات */
+                    cursor: pointer; /* تغيير المؤشر عند التمرير */
+                }
+
+        .image-section {
+            flex: 1; /* تخصيص المساحة المتاحة */
+            background-image: url('https://via.placeholder.com/500'); /* صورة افتراضية */
+            background-size: cover; /* تغطية كاملة للخلفية */
+            background-position: center; /* تمركز الصورة */
+        }
+
+        .lines-circles-container {
+            display: flex; /* وضع flex للعناصر */
+            justify-content: center; /* توسيط العناصر */
+            align-items: center; /* محاذاة العناصر عموديًا */
+            margin-top: 20px; /* مسافة أعلى */
+        }
+
+        .line {
+            width: 100px; /* عرض الخط */
+            height: 2px; /* ارتفاع الخط */
+            background-color: #666; /* لون الخط */
+            position: relative; /* الوضع النسبي */
+            margin: 0 10px; /* مسافة بين الخطوط */
+        }
+
+            .line::before, .line::after {
+                content: ""; /* المحتوى */
+                width: 10px; /* عرض الدائرة */
+                height: 10px; /* ارتفاع الدائرة */
+                background-color: #666; /* لون الدائرة */
+                border-radius: 50%; /* جعل العنصر دائريًا */
+                position: absolute; /* الوضع المطلق */
+            }
+
+            .line::before {
+                left: -5px; /* تموضع الدائرة اليسرى */
+                top: -4px; /* تعديل التمركز العمودي */
+            }
+
+            .line::after {
+                right: -5px; /* تموضع الدائرة اليمنى */
+                top: -4px; /* تعديل التمركز العمودي */
+            }
+    </style>
+</head>
+<body>
+    <div class="container">-->
+<!-- حاوية الصفحة الرئيسية -->
+<!--<div class="form-section">-->
+<!-- قسم النموذج -->
+<!--<h1>Welcome again!</h1>
+<p>Don't have an account? <a href="#">Sign up</a></p>
+<form>
+    <input type="email" placeholder="Email">-->
+<!-- حقل البريد الإلكتروني -->
+<!--<div class="password-container">-->
+<!-- حاوية كلمة المرور -->
+<!--<input type="password" placeholder="Password">--> <!-- حقل كلمة المرور -->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Circle</title>
+    <style>
+        body {
+            margin: 0; /* إزالة الحواف */
+            display: flex; /* استخدام flex لتنسيق العناصر */
+            justify-content: center; /* توسيط أفقي */
+            align-items: center; /* توسيط عمودي */
+            height: 100vh; /* جعل الصفحة بارتفاع الشاشة */
+            background-color: #f8f8f8; /* لون خلفية */
+        }
+
+        .small-circle {
+            width: 20px; /* عرض الدائرة */
+            height: 20px; /* ارتفاع الدائرة */
+            background-color: #ff6600; /* لون الدائرة */
+            border-radius: 50%; /* جعل الحواف مستديرة بالكامل */
+        }
+    </style>
+</head>
+<body>
+    <div class="small-circle"></div>-->
+<!-- الدائرة الصغيرة -->
+<!--</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+            .form-section h1 {
+                font-size: 28px;
+                color: #333;
+            }
+
+            .form-section p {
+                color: #666;
+            }
+
+                .form-section p a {
+                    color: #ff6600;
+                    text-decoration: none;
+                }
+
+            .form-section form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form-section input[type="email"],
+            .form-section .password-container {
+                margin-bottom: 15px;
+            }
+
+                .form-section input[type="email"],
+                .form-section .password-container input[type="password"] {
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+            .form-section .password-container {
+                position: relative;
+            }
+
+                .form-section .password-container img {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+
+            .form-section .or-login {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0;
+                position: relative;
+            }
+
+                .form-section .or-login::before,
+                .form-section .or-login::after {
+                    content: "";
+                    flex: 1;
+                    height: 1px;
+                    background: #ccc;
+                    margin: 0 10px;
+                    position: relative;
+                }
+
+                .form-section .or-login span.circle {
+                    width: 10px;
+                    height: 10px;
+                    background-color: #666;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+
+            .form-section .social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+
+                .form-section .social-icons img {
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Welcome again!</h1>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <form>
+                <input type="email" placeholder="Email">
+                <div class="password-container">
+                    <input type="password" placeholder="Password">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="or-login">
+                <span class="circle"></span>
+                <span>or login with</span>
+                <span class="circle"></span>
+            </div>
+            <div class="social-icons">
+                <img src="icon1.png" alt="Icon 1">
+                <img src="icon2.png" alt="Icon 2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>-->
+<!------------------------------------------------------------------------------------------------------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box; /* لضبط أبعاد العناصر بشكل موحد */
+            margin: 0; /* تصغير المسافات الفارغة الافتراضية */
+            padding: 0px; /* تصغير المسافات الداخلية الافتراضية */
+            font-family: Arial, sans-serif; /* تحديد نوع الخط */
+        }
+
+        body {
+            display: flex; /* تكبير مساحة العرض لتوسيط المحتوى */
+            justify-content: center; /* توسيط المحتوى أفقياً */
+            align-items: center; /* توسيط المحتوى عمودياً */
+            height: 100vh; /* تكبير ارتفاع الصفحة */
+            background-color: black; /* لون خلفية فاتح */
+        }
+
+        .container {
+            display: flex; /* تقسيم الشاشة إلى قسمين */
+            background-color: #fff4e6; /* لون خلفية أبيض */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* تكبير الظل حول الحاوية */
+            border-radius: 20px; /* تصغير الحواف بجعلها مستديرة */
+            overflow: hidden; /* تصغير العناصر التي تخرج عن الحدود */
+
+            width:94%; /* تكبير العرض الكلي للحاوية */
+            height: 88%;
+            max-width: 90%; /* تصغير العرض عند الشاشات الأصغر */
+        }
+
+        .form-section {
+            padding: 35px; /* تكبير المسافات الداخلية */
+            flex: 0.8; /* تكبير نسبة الحاوية النصية */
+            padding-left:21px;
+        }
+
+        .image-section {
+            flex: 1.2; /* تكبير نسبة القسم الخاص بالصورة */
+            background-image: url('Rectangle 1162 (1).svg'); /* صورة افتراضية */
+            background-size: cover; /* تكبير الصورة لتغطية المساحة */
+            background-position: center; /* توسيط الصورة داخل القسم */
+            margin: 20px;
+            border-bottom-left-radius: 28px;
+            border-bottom-right-radius: 28px;
+            border-top-left-radius: 28px;
+            border-top-right-radius: 28px;
+        }
+
+        h1 {
+            font-size:45px; /* تكبير حجم الخط */
+            margin-bottom: 10px; /* تصغير المسافة السفلية */
+        }
+
+        p {
+            margin-bottom: 20px; /* تكبير المسافة السفلية بين النصوص */
+        }
+
+            p a {
+                color:#ff9500; /* لون برتقالي للنص */
+                text-decoration: none; /* تصغير الخط السفلي الافتراضي */
+                border-bottom: 1px solid orange; /* تكبير خط سفلي يدوي */
+               
+            }
+
+        form {
+            display: flex; /* عرض الحقول بشكل عمودي */
+            flex-direction: column; /* تصغير ترتيب العناصر أفقياً */
+        }
+
+        .input-group {
+            display: flex; /* عرض الحقول جنباً إلى جنب */
+            gap: 10px; /* تكبير المسافة بين الحقول */
+            margin-bottom: 15px; /* تكبير المسافة السفلية للمجموعة */
+        }
+
+            .input-group input {
+                flex: 1; /* تكبير الحقل ليأخذ المساحة بالتساوي */
+                padding: 10px; /* تكبير المسافة الداخلية للحقل */
+                border: 1px solid #ff9500; /* تكبير الخط المحيط بالحقل */
+                border-radius: 13px; /* تصغير الحواف بجعلها مستديرة */
+
+            }
+
+        .full-width {
+            margin-bottom: 15px; /* تكبير المسافة السفلية */
+        }
+
+            .full-width input {
+                width: 100%; /* تكبير الحقل ليملأ العرض الكامل */
+                padding: 10px; /* تكبير المسافة الداخلية للحقل */
+                border: 1px solid #ff9500; /* تكبير الخط المحيط بالحقل */
+                border-radius: 13px; /* تصغير الحواف بجعلها مستديرة */
+            }
+
+        .password-group {
+            position: relative; /* يسمح بوضع العناصر بشكل نسبي */
+        }
+
+            .password-group img {
+                position: absolute; /* وضع أيقونة العين داخل الحقل */
+                top: 50%; /* توسيط الأيقونة عمودياً */
+                right: 10px; /* تصغير المسافة بين الأيقونة والحافة اليمنى */
+                transform: translateY(-50%); /* تصغير الموضع لتتوسط الحقل تماماً */
+                width: 20px; /* تصغير حجم الأيقونة */
+                height: 20px; /* تصغير حجم الأيقونة */
+                cursor: pointer; /* تكبير إمكانية التفاعل مع الأيقونة */
+            }
+
+        .checkbox-group {
+            display: flex; /* عرض المربع والنص بجانب بعضهما */
+            align-items: center; /* تكبير محاذاة النص والمربع عمودياً */
+            margin-bottom: 15px; /* تكبير المسافة السفلية */
+            border: 0px solid #ff9500; /* لون الإطار الافتراضي */
+        }
+
+            .checkbox-group input {
+                margin-right: 9px; /* المسافة بين المربع والنص */
+                width: 25px; /* تكبير عرض المربع */
+                height: 25px; /* تكبير ارتفاع المربع */
+                cursor: pointer; /* لتغيير المؤشر عند المرور فوق المربع */
+                appearance: none; /* إزالة التنسيق الافتراضي */
+                border: 1px solid #ff9500; /* لون الحدود */
+            }
+
+        .divider {
+            display: flex; /* عرض الخطوط والنص بجانب بعضهم */
+            align-items: center; /* تكبير المحاذاة عمودياً */
+            margin: 20px 0; /* تكبير المسافة العلوية والسفلية */
+        }
+
+            .divider::before,
+            .divider::after {
+                content: ''; /* تكبير وجود الخط */
+                flex: 1; /* تكبير طول الخط */
+                height: 1px; /* تصغير سماكة الخط */
+                background-color: #ff9500; /* لون رمادي للخط */
+            }
+
+            .divider span {
+                margin: 0 10px; /* تكبير المسافة حول النص */
+                color:black; /* لون رمادي للنص */
+            }
+
+        .social-login {
+            display: flex; /* عرض الأزرار بجانب بعضها */
+            gap: 22px; /* تكبير المسافة بين الأزرار */
+            margin-bottom: 20px; /* تكبير المسافة السفلية */
+        }
+
+            .social-login button {
+                flex: 1; /* تكبير حجم الأزرار لتكون متساوية */
+                padding: 10px; /* تكبير المسافة الداخلية للأزرار */
+                border: 1px solid #ff9500; /* تكبير الحدود حول الأزرار */
+                border-radius: 13px; /* تصغير الحواف بجعلها مستديرة */
+                display: flex; /* عرض النصوص والأيقونات جنباً إلى جنب */
+                align-items: center; /* تكبير المحاذاة عمودياً */
+                justify-content: center; /* تكبير المحاذاة أفقياً */
+                gap: 4px; /* تكبير المسافة بين النصوص والأيقونات */
+                cursor: pointer; /* تكبير إمكانية الضغط على الزر */
+            }
+
+            .social-login img {
+                width: 20px; /* تصغير حجم الأيقونات */
+                height: 20px; /* تصغير حجم الأيقونات */
+            }
+
+        .submit-btn {
+            padding: 10px; /* تكبير المسافة الداخلية للزر */
+            background-color: #ff9500; /* لون برتقالي للزر */
+            color: #black; /* تكبير النص بلون أبيض */
+            border: none; /* تصغير الحدود الافتراضية للزر */
+            border-radius: 13px; /* تصغير الحواف بجعلها مستديرة */
+            cursor: pointer; /* تكبير إمكانية الضغط على الزر */
+        }
+
+            .submit-btn:hover {
+                background-color: darkorange; /* تكبير اللون عند التمرير على الزر */
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <h1 style="font-family: 'Cormorant Upright'">Create an Account</h1> <!-- عنوان رئيسي للتصميم -->
+            <p>Already have an account? <a href="#">Login</a></p> <!-- نص ورابط لتسجيل الدخول -->
+
+            <form>
+                <!-- First and Last Name Fields -->
+                <div class="input-group">
+                    <input type="text" placeholder="First name"> <!-- حقل الاسم الأول -->
+                    <input type="text" placeholder="Last name"> <!-- حقل اسم العائلة -->
+                </div>
+
+                <!-- Email Field -->
+                <div class="full-width">
+                    <input type="email" placeholder="Email"> <!-- حقل البريد الإلكتروني -->
+                </div>
+
+                <!-- Password Field -->
+                <div class="full-width password-group">
+                    <input type="password" placeholder="Password"> <!-- حقل كلمة المرور -->
+                    <img src="mdi_eye-outline (1).svg" alt="Show Password"> <!-- أيقونة عرض كلمة المرور -->
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div class="full-width password-group">
+                    <input type="password" placeholder="Confirm Password"> <!-- حقل تأكيد كلمة المرور -->
+                    <img src="mdi_eye-outline (1).svg" alt="Show Password"> <!-- أيقونة عرض تأكيد كلمة المرور -->
+                </div>
+
+                <!-- Checkbox Field -->
+                <div class="checkbox-group">
+                    <input style="border-color:#ff9500" type="checkbox" id="terms"> <!-- مربع الموافقة على السياسة -->
+                    <label  for="terms">You agree to our friendly privacy policy</label> <!-- النص الموازي للمربع -->
+                </div>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>or sign up with</span> <!-- نص الفاصل بين الخيارات -->
+                </div>
+
+                <!-- Social Login Buttons -->
+                <div class="social-login">
+                    <button style="background-color:white">
+                        <img src="flat-color-icons_google (2).svg" alt="Google Logo"> <!-- أيقونة جوجل -->
+                        Google <!-- زر تسجيل الدخول باستخدام جوجل -->
+                    </button>
+                    <button style="background-color:white">
+                        <img src="mdi_apple (2).svg" alt="Apple Logo"> <!-- أيقونة أبل -->
+                        Apple <!-- زر تسجيل الدخول باستخدام أبل -->
+                    </button>
+                </div>
+
+                <!-- Submit Button -->
+                <button class="submit-btn">Create an account</button> <!-- زر إنشاء الحساب -->
+            </form>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-section"></div> <!-- قسم الصورة الجانبية -->
+    </div>
+</body>
+</html>
+
+

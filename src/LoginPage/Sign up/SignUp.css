@@ -1,0 +1,261 @@
+.SignUpPage {
+  display: flex; /* تكبير مساحة العرض لتوسيط المحتوى */
+  justify-content: center; /* توسيط المحتوى أفقياً */
+  align-items: center; /* توسيط المحتوى عمودياً */
+  height: 700px;
+ 
+}
+
+.containerSignUp {
+  display: flex; /* تقسيم الشاشة إلى قسمين */
+            background-color: #fff4e6; /* لون خلفية أبيض */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* تكبير الظل حول الحاوية */
+  border-radius: 20px; /* تصغير الحواف بجعلها مستديرة */
+  overflow: hidden; /* تصغير العناصر التي تخرج عن الحدود */
+
+  width: 1999px; /* تكبير العرض الكلي للحاوية */
+  height: 670px;
+  max-width: 1400px; /* تصغير العرض عند الشاشات الأصغر */
+}
+
+.form-sectionSignUp {
+  padding: 35px; /* تكبير المسافات الداخلية */
+  flex: 0.8; /* تكبير نسبة الحاوية النصية */
+  padding-left: 21px;
+  max-width: 700px;
+}
+
+.image-section3 {
+  height: 900px;
+  flex: 2; /* تكبير نسبة القسم الخاص بالصورة */
+  background-image: url("Rectangle 1162 (1).svg"); /* صورة افتراضية */
+  background-size: cover; /* تكبير الصورة لتغطية المساحة */
+  background-position: center; /* توسيط الصورة داخل القسم */
+  margin: 20px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+    max-width: 782px;
+  max-height: 620px;
+  padding-left: 10px;
+}
+
+
+
+h1 {
+  font-size: 64px; /* تكبير حجم الخط */
+  margin-bottom: 10px; /* تصغير المسافة السفلية */
+  color: #151716;
+}
+
+p {
+  margin-bottom: 0px; /* تكبير المسافة السفلية بين النصوص */
+  font-family: Arial, sans-serif;
+}
+
+p a {
+  color: #ff9500; /* لون برتقالي للنص */
+  text-decoration: none; /* تصغير الخط السفلي الافتراضي */
+  border-bottom: 1px solid orange; /* تكبير خط سفلي يدوي */
+}
+
+form {
+  display: flex; /* عرض الحقول بشكل عمودي */
+  flex-direction: column; /* تصغير ترتيب العناصر أفقياً */
+  color: #151716;
+}
+
+.input-group {
+  display: flex; /* عرض الحقول جنباً إلى جنب */
+  gap: 10px; /* تكبير المسافة بين الحقول */
+  margin-bottom: 15px; /* تكبير المسافة السفلية للمجموعة */
+}
+
+.input-group input {
+  flex: 1; /* تكبير الحقل ليأخذ المساحة بالتساوي */
+  padding: 10px; /* تكبير المسافة الداخلية للحقل */
+  border: 1px solid #ff9500; /* تكبير الخط المحيط بالحقل */
+  border-radius: 13px; /* تصغير الحواف بجعلها مستديرة */
+   height: 52px;
+}
+
+.full-width {
+  margin-bottom: 15px; /* تكبير المسافة السفلية */
+}
+
+.full-width input {
+  width: 600px; /* تكبير الحقل ليملأ العرض الكامل */
+  height: 52px;
+  padding: 10px; /* تكبير المسافة الداخلية للحقل */
+  border: 1px solid #ff9500; /* تكبير الخط المحيط بالحقل */
+  border-radius: 16px; /* تصغير الحواف بجعلها مستديرة */
+}
+
+.password-group {
+  position: relative; /* يسمح بوضع العناصر بشكل نسبي */
+}
+
+.password-group img {
+  position: absolute; /* وضع أيقونة العين داخل الحقل */
+  top: 50%; /* توسيط الأيقونة عمودياً */
+  right: 10px; /* تصغير المسافة بين الأيقونة والحافة اليمنى */
+  transform: translateY(-50%); /* تصغير الموضع لتتوسط الحقل تماماً */
+  width: 20px; /* تصغير حجم الأيقونة */
+  height: 20px; /* تصغير حجم الأيقونة */
+  cursor: pointer; /* تكبير إمكانية التفاعل مع الأيقونة */
+}
+
+.checkbox-group {
+  display: flex; /* عرض المربع والنص بجانب بعضهما */
+  align-items: center; /* تكبير محاذاة النص والمربع عمودياً */
+  margin-bottom: 15px; /* تكبير المسافة السفلية */
+  border: 0px solid #ff9500; /* لون الإطار الافتراضي */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  border: 2px solid #ff9500;
+  border-radius: 4px;
+  appearance: none;
+  outline: none;
+}
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: #ff9500;
+  border-color: #ff9500;
+}
+
+.lineDive2 {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-top: 20px;
+  padding-bottom: 26px;
+}
+
+.lineDive2 img {
+  width: 190px;
+}
+
+.lineDive2 span {
+  margin: 0 10px; /* تكبير المسافة حول النص */
+  color: black; /* لون رمادي للنص */
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.social-login {
+  display: flex; /* عرض الأزرار بجانب بعضها */
+  gap: 22px; /* تكبير المسافة بين الأزرار */
+  margin-bottom: 20px; /* تكبير المسافة السفلية */
+}
+
+.social-login button {
+  flex: 6; /* تكبير حجم الأزرار لتكون متساوية */
+  padding: 10px; /* تكبير المسافة الداخلية للأزرار */
+  border: 1px solid #ff9500; /* تكبير الحدود حول الأزرار */
+  border-radius: 16px; /* تصغير الحواف بجعلها مستديرة */
+  display: flex; /* عرض النصوص والأيقونات جنباً إلى جنب */
+  align-items: center; /* تكبير المحاذاة عمودياً */
+  justify-content: center; /* تكبير المحاذاة أفقياً */
+  gap: 4px; /* تكبير المسافة بين النصوص والأيقونات */
+
+  cursor: pointer; /* تكبير إمكانية الضغط على الزر */
+}
+
+.social-login img {
+  width: 20px; /* تصغير حجم الأيقونات */
+  height: 20px; /* تصغير حجم الأيقونات */
+}
+
+.submit-btn {
+  padding: 10px; /* تكبير المسافة الداخلية للزر */
+  background-color: #ff9500; /* لون برتقالي للزر */
+  border: none; /* تصغير الحدود الافتراضية للزر */
+  border-radius: 13px; /* تصغير الحواف بجعلها مستديرة */
+  cursor: pointer; /* تكبير إمكانية الضغط على الزر */
+  height: 52px;
+}
+.submit-btn:hover {
+  background-color: darkorange; /* تكبير اللون عند التمرير على الزر */
+}
+
+/* الشاشات الأكبر من 900 بكسل */
+@media (max-width: 900px) {
+  .containerSignUp {
+ padding: 20px;
+  }
+  .containerSignUp {
+    flex-direction: column; /* ترتيب الصورة تحت النموذج */
+    height: auto; /* تكييف الارتفاع حسب المحتوى */
+  }
+  .form-sectionSignUp {
+    order: 1; /* الأولوية للنموذج */
+    padding: 20px; /* تقليل المسافات الداخلية */
+    width: 100%;
+  }
+  .image-section3 {
+    order: 2; /* الصورة تأتي بعد النموذج */
+    width: 100%; /* ملء العرض بالكامل */
+    height: 300px; /* تقليل ارتفاع الصورة */
+    margin: 0; /* إزالة الهوامش */
+  }
+
+  .full-width input {
+    width: 100%; /* نفس العرض لملاءمة الشاشة الصغيرة */
+  }
+  .input-group input {
+    width: 100%; /* عرض الحقول داخل المجموعة */
+  }
+      .containerSignUp {
+ padding: 20px;
+  }
+}
+ 
+/* الشاشات الأصغر من 680 بكسل */
+@media (max-width: 680px) {
+
+  .image-section3{
+    display: none;
+  }
+  .form-sectionSignUp input {
+    width: 100%; /* ملء العرض بالكامل للحقل */
+  }
+  .form-sectionSignUp {
+    padding: 10px;
+  }
+  .image-section3 {
+    display: block;
+    width: 100%; /* الصورة تأخذ العرض الكامل */
+    height: 250px; /* تقليل ارتفاع الصورة لتناسب العرض */
+  }
+
+    .SignUpPage {
+      position: relative;
+   }
+      .containerSignUp {
+ padding: 20px;
+  }
+}
+
+/* الشاشات الأصغر من 482 بكسل */
+@media (max-width: 482px) {
+  h1 {
+    font-size: 32px; /* تقليل حجم الخط للعناوين */
+  }
+  .form-sectionSignUp {
+    padding: 8px;
+  }
+  .image-section3 {
+    display: none; /* إخفاء الصورة لتحسين الأداء على الهواتف الصغيرة */
+  }
+
+    .containerSignUp {
+ padding: 20px;
+  }
+}
