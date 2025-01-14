@@ -1,0 +1,142 @@
+.food-selection0 h2 {
+  font-size: 60px; /* حجم النص */
+  font-weight: 700; /* سمك الخط */
+  line-height: 1.1px; /* ارتفاع السطر */
+  color: white; /* لون النص */
+  margin: 57px;
+  margin-bottom: 42px;
+  font-family: "Cormorant Upright", serif;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* انتقال ناعم عند تغيير الحجم */
+
+}
+
+.cardss {
+  display: flex;
+ justify-content: center;
+   gap: 26px; /* المسافة بين البطاقات */
+  padding-top: -30px; /* المسافة من النافبار */
+  flex-wrap: wrap; /* يسمح بالتفاف العناصر إذا زاد عددها */
+ cursor: pointer;
+ 
+}
+
+ 
+.cardd {
+  background-color: #fff4e6; /* لون خلفية البطاقة */
+  border-radius: 48px; /* تدوير الزوايا */
+  box-shadow: 10 10px 10px rgba(0, 0, 0, 0.1); /* الظل */
+  width: 290px; /* عرض البطاقة */
+  height: 381px; /* ارتفاع البطاقة */
+  overflow: hidden; /* قص المحتوى الزائد */
+  display: flex;
+  flex-direction: column;
+}
+
+.cardd img {
+  width: 100%; /* عرض الصورة بالكامل */
+  height: 60%; /* تقليل ارتفاع الصورة إلى 60% من البطاقة */
+  object-fit: cover; /* ملء الصورة دون تشويه */
+}
+
+.cardd .content {
+  display: flex;
+  height: 38%; /* الجزء الأبيض يمثل 40% من البطاقة */
+  justify-content: space-between; /* توزيع العناصر أفقيًا */
+  align-items: center; /* محاذاة عمودية */
+  padding: 19px; /* الحشوة داخل البطاقة */
+}
+
+.cardd .text {
+  display: flex;
+  flex-direction: column; /* عرض النصوص عموديًا */
+  gap: px; /* المسافة بين النصوص */
+}
+
+.cardd h3 {
+  font-size: 30px; /* حجم عنوان البطاقة */
+  font-family: Cormorant Upright;
+
+  position: relative; /* لجعل الحركات تعمل */
+  top: -3px; /* لتحريك العنوان لأعلى */
+  left: -9px; /* لتحريك العنوان إلى اليمين */
+  text-overflow: ellipsis; /* يضيف ثلاث نقاط (...) إذا تجاوز النص العرض المتاح */
+  white-space: nowrap; /* يمنع التفاف النص إلى السطر التالي */
+  overflow: hidden; /* يخفي أي نص يتجاوز الحد المحدد */
+  margin: 0 0 8px 0; /* إزالة الهوامش العلوية 
+  والجانبية وجعل الهامش السفلي 8px */
+}
+.cardd p {
+  font-size: 14px; /* حجم النص */
+  /*                font-weight: bold;*/
+  font-family: Inter;
+  color: black; /* لون النص */
+  margin: 0; /* إزالة الهوامش */
+  margin: -15px 0 0 0;
+  line-height: 10px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+  line-height: 21px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+  word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+
+  word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+  white-space: normal; /* يسمح بتفصيل النص على أكثر من سطر */
+  width: 100%; /* تأكد من أن النص يأخذ المساحة بالكامل */
+}
+.cardd .stars {
+  color: #ffb854; /* لون النجوم */
+  font-weight: bold;
+  color: #ffb854; /* لون النجوم */
+  font-size: 20px; /* حجم النجوم - يمكنك زيادته أو تقليله */
+  position: relative; /* لجعل تأثير التحريك يعمل */
+  top: -10px; /* تحريك النجوم لأسفل - يمكنك تعديل القيمة حسب الحاجة */
+}
+.cardd .price {
+  font-size: 40px; /* حجم النص */
+  font-weight: bold; /* سمك النص */
+  color: black; /* لون السعر */
+  margin: 0;
+  font-weight: bold; /* سمك النص */
+
+  text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+  position: relative;
+  top: 47px; /* لتحريكه لأسفل */
+  left: 30px; /* لتحريكه لليمين */
+  font-family: Cormorant Upright;
+}
+.cardd .heart {
+  width: 59px;
+  height: 49px;
+  font-size: 11px; /* حجم النص */
+  color: black; /* لون السعر */
+
+  font-weight: bold; /* سمك النص */
+
+  text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+  position: relative;
+  top: -34px; /* لتحريكه لأسفل */
+  left: -10px; /* لتحريكه لليمين */
+}
+
+
+@media (min-width: 768px) {
+  .cardss {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardss {
+   }
+}
+
+@media (max-width: 768px) {
+  .cardd {
+    flex-basis: calc(50% - 10px); /* عرض بنسبة 50% مع هوامش */
+  }
+}
+
+@media (max-width: 480px) {
+  .cardd {
+    flex-basis: 100%; /* عرض بنسبة 100% لشاشات أصغر */
+  }
+}

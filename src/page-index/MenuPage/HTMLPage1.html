@@ -1,0 +1,765 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+       }
+      .food-selection h2 {
+        font-size: 60px; /* حجم النص */
+        font-weight: 700; /* سمك الخط */
+        line-height: 1.1px; /* ارتفاع السطر */
+        color: white; /* لون النص */
+        margin: 57px;
+        margin-bottom: 42px;
+        font-family: "Cormorant Upright", serif;
+      }
+      /* قسم البطاقات */
+      .cards {
+        display: flex;
+        justify-content: center; /* محاذاة البطاقات في الوسط */
+        gap: 26px; /* المسافة بين البطاقات */
+        padding-top: -30px; /* المسافة من النافبار */
+      }
+
+      .card {
+        background-color: #fff4e6; /* لون خلفية البطاقة */
+        border-radius: 48px; /* تدوير الزوايا */
+        box-shadow: 10 10px 10px rgba(0, 0, 0, 0.1); /* الظل */
+        width: 290px; /* عرض البطاقة */
+        height: 381px; /* ارتفاع البطاقة */
+        overflow: hidden; /* قص المحتوى الزائد */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card img {
+        width: 100%; /* عرض الصورة بالكامل */
+        height: 60%; /* تقليل ارتفاع الصورة إلى 60% من البطاقة */
+        object-fit: cover; /* ملء الصورة دون تشويه */
+      }
+
+      .card .content {
+        display: flex;
+        height: 38%; /* الجزء الأبيض يمثل 40% من البطاقة */
+        justify-content: space-between; /* توزيع العناصر أفقيًا */
+        align-items: center; /* محاذاة عمودية */
+        padding: 19px; /* الحشوة داخل البطاقة */
+      }
+
+      .card .text {
+        display: flex;
+        flex-direction: column; /* عرض النصوص عموديًا */
+        gap: 8px; /* المسافة بين النصوص */
+      }
+
+      .card h3 {
+        font-size: 30px; /* حجم عنوان البطاقة */
+        font-family: Cormorant Upright;
+        font-weight: 700; /* سمك الخط */
+
+        position: relative; /* لجعل الحركات تعمل */
+        top: -3px; /* لتحريك العنوان لأعلى */
+        left: -9px; /* لتحريك العنوان إلى اليمين */
+
+        margin: 0 0 8px 0; /* إزالة الهوامش العلوية والجانبية وجعل الهامش السفلي 8px */
+      }
+
+      .card p {
+        font-size: 14px; /* حجم النص */
+        /*                font-weight: bold;*/
+        font-family: Inter;
+        color: black; /* لون النص */
+        margin: 0; /* إزالة الهوامش */
+        margin: -15px 0 0 0;
+        line-height: 10px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        line-height: 21px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+        white-space: normal; /* يسمح بتفصيل النص على أكثر من سطر */
+        width: 100%; /* تأكد من أن النص يأخذ المساحة بالكامل */
+      }
+
+      .card .price {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: 47px; /* لتحريكه لأسفل */
+        left: 38px; /* لتحريكه لليمين */
+      }
+
+      .card .stars {
+        color: #ffb854; /* لون النجوم */
+        font-weight: bold;
+        color: #ffb854; /* لون النجوم */
+        font-size: 24px; /* حجم النجوم - يمكنك زيادته أو تقليله */
+        position: relative; /* لجعل تأثير التحريك يعمل */
+        top: 8px; /* تحريك النجوم لأسفل - يمكنك تعديل القيمة حسب الحاجة */
+      }
+
+      .card .heart {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: -49px; /* لتحريكه لأسفل */
+        left: 5px; /* لتحريكه لليمين */
+      }
+
+      /*----------------------------------------------------------*/
+      body {
+        background-color: black;
+      }
+      /* قسم البطاقات */
+      .cards {
+        display: flex;
+        justify-content: center; /* محاذاة البطاقات في الوسط */
+        gap: 26px; /* المسافة بين البطاقات */
+        margin-top: 19px; /* المسافة من النافبار */
+      }
+
+      .card {
+        background-color: #fff4e6; /* لون خلفية البطاقة */
+        border-radius: 48px; /* تدوير الزوايا */
+        box-shadow: 10 10px 10px rgba(0, 0, 0, 0.1); /* الظل */
+        width: 290px; /* عرض البطاقة */
+        height: 381px; /* ارتفاع البطاقة */
+        overflow: hidden; /* قص المحتوى الزائد */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card img {
+        width: 100%; /* عرض الصورة بالكامل */
+        height: 60%; /* تقليل ارتفاع الصورة إلى 60% من البطاقة */
+        object-fit: cover; /* ملء الصورة دون تشويه */
+      }
+
+      .card .content {
+        display: flex;
+        height: 38%; /* الجزء الأبيض يمثل 40% من البطاقة */
+        justify-content: space-between; /* توزيع العناصر أفقيًا */
+        align-items: center; /* محاذاة عمودية */
+        padding: 19px; /* الحشوة داخل البطاقة */
+      }
+
+      .card .text {
+        display: flex;
+        flex-direction: column; /* عرض النصوص عموديًا */
+        gap: 8px; /* المسافة بين النصوص */
+      }
+
+      .card h3 {
+        font-size: 30px; /* حجم عنوان البطاقة */
+        font-family: Cormorant Upright;
+        font-weight: 700; /* سمك الخط */
+
+        position: relative; /* لجعل الحركات تعمل */
+        top: -3px; /* لتحريك العنوان لأعلى */
+        left: -9px; /* لتحريك العنوان إلى اليمين */
+
+        margin: 0 0 8px 0; /* إزالة الهوامش العلوية والجانبية وجعل الهامش السفلي 8px */
+      }
+
+      .card p {
+        font-size: 14px; /* حجم النص */
+        /*                font-weight: bold;*/
+        font-family: Inter;
+        color: black; /* لون النص */
+        margin: 0; /* إزالة الهوامش */
+        margin: -15px 0 0 0;
+        line-height: 10px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        line-height: 21px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+        white-space: normal; /* يسمح بتفصيل النص على أكثر من سطر */
+        width: 100%; /* تأكد من أن النص يأخذ المساحة بالكامل */
+      }
+
+      .card .price {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: 47px; /* لتحريكه لأسفل */
+        left: 38px; /* لتحريكه لليمين */
+      }
+
+      .card .stars {
+        color: #ffb854; /* لون النجوم */
+        font-weight: bold;
+        color: #ffb854; /* لون النجوم */
+        font-size: 24px; /* حجم النجوم - يمكنك زيادته أو تقليله */
+        position: relative; /* لجعل تأثير التحريك يعمل */
+        top: 8px; /* تحريك النجوم لأسفل - يمكنك تعديل القيمة حسب الحاجة */
+      }
+
+      .card .heart {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: -49px; /* لتحريكه لأسفل */
+        left: 5px; /* لتحريكه لليمين */
+      }
+
+      /*----------------------------------------------------------*/
+      body {
+        background-color: black;
+      }
+      /* قسم البطاقات */
+      .cards {
+        display: flex;
+        justify-content: center; /* محاذاة البطاقات في الوسط */
+        gap: 26px; /* المسافة بين البطاقات */
+        margin-top: 19px; /* المسافة من النافبار */
+      }
+
+      .card {
+        background-color: #fff4e6; /* لون خلفية البطاقة */
+        border-radius: 48px; /* تدوير الزوايا */
+        box-shadow: 10 10px 10px rgba(0, 0, 0, 0.1); /* الظل */
+        width: 290px; /* عرض البطاقة */
+        height: 381px; /* ارتفاع البطاقة */
+        overflow: hidden; /* قص المحتوى الزائد */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card img {
+        width: 100%; /* عرض الصورة بالكامل */
+        height: 60%; /* تقليل ارتفاع الصورة إلى 60% من البطاقة */
+        object-fit: cover; /* ملء الصورة دون تشويه */
+      }
+
+      .card .content {
+        display: flex;
+        height: 38%; /* الجزء الأبيض يمثل 40% من البطاقة */
+        justify-content: space-between; /* توزيع العناصر أفقيًا */
+        align-items: center; /* محاذاة عمودية */
+        padding: 19px; /* الحشوة داخل البطاقة */
+      }
+
+      .card .text {
+        display: flex;
+        flex-direction: column; /* عرض النصوص عموديًا */
+        gap: 8px; /* المسافة بين النصوص */
+      }
+
+      .card h3 {
+        font-size: 30px; /* حجم عنوان البطاقة */
+        font-family: Cormorant Upright;
+        font-weight: 700; /* سمك الخط */
+
+        position: relative; /* لجعل الحركات تعمل */
+        top: -3px; /* لتحريك العنوان لأعلى */
+        left: -9px; /* لتحريك العنوان إلى اليمين */
+
+        margin: 0 0 8px 0; /* إزالة الهوامش العلوية والجانبية وجعل الهامش السفلي 8px */
+      }
+
+      .card p {
+        font-size: 14px; /* حجم النص */
+        /*                font-weight: bold;*/
+        font-family: Inter;
+        color: black; /* لون النص */
+        margin: 0; /* إزالة الهوامش */
+        margin: -15px 0 0 0;
+        line-height: 10px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        line-height: 21px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+        white-space: normal; /* يسمح بتفصيل النص على أكثر من سطر */
+        width: 100%; /* تأكد من أن النص يأخذ المساحة بالكامل */
+      }
+
+      .card .price {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: 47px; /* لتحريكه لأسفل */
+        left: 38px; /* لتحريكه لليمين */
+      }
+
+      .card .stars {
+        color: #ffb854; /* لون النجوم */
+        font-weight: bold;
+        color: #ffb854; /* لون النجوم */
+        font-size: 24px; /* حجم النجوم - يمكنك زيادته أو تقليله */
+        position: relative; /* لجعل تأثير التحريك يعمل */
+        top: 8px; /* تحريك النجوم لأسفل - يمكنك تعديل القيمة حسب الحاجة */
+      }
+
+      .card .heart {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: -49px; /* لتحريكه لأسفل */
+        left: 5px; /* لتحريكه لليمين */
+      }
+
+      /*----------------------------------------------------------*/
+      body {
+        background-color: black;
+      }
+      /* قسم البطاقات */
+      .cards {
+        display: flex;
+        justify-content: center; /* محاذاة البطاقات في الوسط */
+        gap: 26px; /* المسافة بين البطاقات */
+        margin-top: 19px; /* المسافة من النافبار */
+      }
+
+      .card {
+        background-color: #fff4e6; /* لون خلفية البطاقة */
+        border-radius: 48px; /* تدوير الزوايا */
+        box-shadow: 10 10px 10px rgba(0, 0, 0, 0.1); /* الظل */
+        width: 290px; /* عرض البطاقة */
+        height: 381px; /* ارتفاع البطاقة */
+        overflow: hidden; /* قص المحتوى الزائد */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card img {
+        width: 100%; /* عرض الصورة بالكامل */
+        height: 60%; /* تقليل ارتفاع الصورة إلى 60% من البطاقة */
+        object-fit: cover; /* ملء الصورة دون تشويه */
+      }
+
+      .card .content {
+        display: flex;
+        height: 38%; /* الجزء الأبيض يمثل 40% من البطاقة */
+        justify-content: space-between; /* توزيع العناصر أفقيًا */
+        align-items: center; /* محاذاة عمودية */
+        padding: 19px; /* الحشوة داخل البطاقة */
+      }
+
+      .card .text {
+        display: flex;
+        flex-direction: column; /* عرض النصوص عموديًا */
+        gap: 8px; /* المسافة بين النصوص */
+      }
+
+      .card h3 {
+        font-size: 30px; /* حجم عنوان البطاقة */
+        font-family: Cormorant Upright;
+        font-weight: 700; /* سمك الخط */
+
+        position: relative; /* لجعل الحركات تعمل */
+        top: -3px; /* لتحريك العنوان لأعلى */
+        left: -9px; /* لتحريك العنوان إلى اليمين */
+
+        margin: 0 0 8px 0; /* إزالة الهوامش العلوية والجانبية وجعل الهامش السفلي 8px */
+      }
+
+      .card p {
+        font-size: 14px; /* حجم النص */
+        /*                font-weight: bold;*/
+        font-family: Inter;
+        color: black; /* لون النص */
+        margin: 0; /* إزالة الهوامش */
+        margin: -15px 0 0 0;
+        line-height: 10px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        line-height: 21px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+
+        word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+        white-space: normal; /* يسمح بتفصيل النص على أكثر من سطر */
+        width: 100%; /* تأكد من أن النص يأخذ المساحة بالكامل */
+      }
+
+      .card .price {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: 47px; /* لتحريكه لأسفل */
+        left: 38px; /* لتحريكه لليمين */
+      }
+
+      .card .stars {
+        color: #ffb854; /* لون النجوم */
+        font-weight: bold;
+        color: #ffb854; /* لون النجوم */
+        font-size: 24px; /* حجم النجوم - يمكنك زيادته أو تقليله */
+        position: relative; /* لجعل تأثير التحريك يعمل */
+        top: 8px; /* تحريك النجوم لأسفل - يمكنك تعديل القيمة حسب الحاجة */
+      }
+
+      .card .heart {
+        font-size: 40px; /* حجم النص */
+        font-weight: bold; /* سمك النص */
+        color: black; /* لون السعر */
+        margin: 0;
+        font-weight: bold; /* سمك النص */
+
+        text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+        position: relative;
+        top: -49px; /* لتحريكه لأسفل */
+        left: 5px; /* لتحريكه لليمين */
+      }
+    </style>
+  </head>
+  <body>
+    <!--البطاقات-->
+
+    عنوان الصفحة
+    <div class="food-selection">
+      <h2>Main Courses</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Wagyu Steak" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Lobster Roll" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Pasta Carbonara" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Cheesecake" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------------------------->
+    <div class="cards">
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Wagyu Steak" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Lobster Roll" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Pasta Carbonara" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Cheesecake" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------------------------------------->
+    <div class="cards">
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Wagyu Steak" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Lobster Roll" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Pasta Carbonara" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Cheesecake" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------------------------------------->
+    <div class="cards">
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Wagyu Steak" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Lobster Roll" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Pasta Carbonara" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous<br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Rectangle 1153 (1).svg" alt="Cheesecake" />
+        <div class="content">
+          <div class="text">
+            <h3>Wagyu Steak</h3>
+            <p>
+              250g of lean steak with sous <br />
+              smashed potato or rice
+            </p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+          <div class="price">68$</div>
+          <div class="heart">
+            <img src="solar_heart-bold (2).svg" alt="Lobster Roll" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
