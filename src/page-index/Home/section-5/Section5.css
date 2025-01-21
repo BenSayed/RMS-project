@@ -1,0 +1,181 @@
+/* CSS File (Testimonials.css) */
+
+.testimonials {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  background-color: #fff8f0;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonials-header .highlight {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.testimonials-header .heart {
+  color: #ff6b6b;
+  font-size: 1.5rem;
+}
+
+.testimonials-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-section {
+  width: 700px;
+            height: 500px;}
+svg{
+  width: 100%;
+            height: 100%;;
+}
+
+.burger-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.group-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.likes {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.reviews-section {
+  max-height: 400px; /* تحديد أقصى ارتفاع */
+  overflow-y: auto; /* تفعيل التمرير العمودي */
+  overflow-x: hidden; /* إخفاء التمرير الأفقي */
+  padding-right: 0px;
+  margin-right: 30px;
+  /* مسافة داخلية لتجنب تداخل المحتوى مع شريط التمرير */
+  cursor: pointer; /* تغيير المؤشر عند التمرير */
+  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
+  -ms-overflow-style: none; /* إخفاء شريط التمرير في Internet Explorer */
+  user-select: none; /* منع تحديد النص */
+  scroll-behavior: smooth; /* تفعيل التمرير السلس */
+}
+
+.reviews-section::-webkit-scrollbar {
+  display: none; /* إخفاء شريط التمرير في Chrome و Safari */
+}
+
+.reviews-section:active {
+  cursor: pointer; /* تغيير المؤشر عند السحب */
+}
+
+.review {
+  background-color: #1c1c1c; /* لون خلفية البطاقة الداكن */
+  padding: 30px ; /* مسافة داخلية */
+  border-radius: 25px; /* زوايا دائرية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل لإبراز البطاقة */
+  color: #ffffff; /* لون النص */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* مسافة بين العناصر */
+  width: 576px; /* عرض البطاقة */
+  margin-bottom:16px ;
+}
+
+.review .stars {
+  color: #ffc107; /* لون النجوم */
+  font-size: 1.5rem;
+  font-weight:900;
+}
+
+.review p {
+  font-size: 1rem;
+  line-height: 1.5; /* تحسين المسافة بين السطور */
+  color: #ccc; /* لون النص الفاتح */
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* مسافة بين الصورة والنص */
+  margin-top: 18px;
+}
+
+.review-footer .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* شكل دائري للصورة */
+  object-fit: cover;
+}
+
+.review-footer .reviewer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-footer .reviewer-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.review-footer .reviewer-info span {
+  font-size: 0.8rem;
+  color: #888; /* لون النص الثانوي */
+}
+
+.cta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 48px;
+}
+
+.cta-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+    margin-left:15px ;
+
+}
+
+.join-button {
+  background-color: #f1c987;
+  color: #000000;
+  border: none;
+  margin-right:15px ;
+  padding: 5px 5px 5px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center; /* محاذاة النص والصورة عموديًا في المنتصف */
+}
+
+.join-button:hover {
+  background-color: #ffae42;
+}
+
+.join-button img {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}

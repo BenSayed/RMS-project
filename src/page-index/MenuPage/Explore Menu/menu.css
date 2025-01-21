@@ -1,0 +1,261 @@
+.mune-cont {
+  font-family: "Cormorant Upright", serif;  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; 
+  color: #000000;
+  font-size: large;
+}
+
+.container77 {
+  width: 90%;
+  margin: auto;
+}
+
+.header2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fef7eb;
+  border: 2px solid orange;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 1000px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header2 .content2 {
+  max-width: 60%;
+}
+
+.header2 h1 {
+  font-size: 36px;
+  color: #000;
+  margin: 0;
+}
+
+.header2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  line-height: 1.8;
+}
+
+.header2 ul li {
+  font-size: 16px;
+  color: #333;
+}
+
+.header2 .price-section2 {
+  text-align: center;
+  max-width: 30%;
+}
+
+.header2 .price2 {
+  font-size: 36px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header2 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.header2 .order-btn2 {
+  display: inline-block;
+  background-color: orange;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.header2 .order-btn2:hover {
+  background-color: darkorange;
+}
+
+.menu-section2 {
+  margin-top: 30px;
+}
+
+.menu-section2 h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #f9b233;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.card-container2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cardd2 {
+  background-color: #f8e1c3;
+  border-radius: 40px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000000;
+}
+
+.cardd2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cardd2 img {
+  width: 100%;
+  border-radius: 19px;
+  height: 50%;
+}
+
+.cardd2 h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.cardd2 p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.cardd2 .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #f9b233;
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f9b233;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.cards2 {
+  display: flex;
+  justify-content: center; /* محاذاة الكارد في الوسط */
+  gap: 22px; /* المسافة بين  الكارد */
+  margin-top: 19px; /* المسافة من النافبار */
+}
+
+.card2 {
+  background-color: #fff4e6; /* لون خلفية الكارد */
+  border-radius: 48px; /* تدوير الزوايا */
+  box-shadow: 10 10px 10px rgba(0, 0, 0, 0.1); /* الظل */
+  width: 290px; /* عرض الكارد */
+  height: 381px; /* ارتفاع الكارد */
+  overflow: hidden; /* اخفاء المحتوى الزائد */
+  display: flex;
+  flex-direction: column;
+}
+
+.card2 img {
+  display: flex;
+  flex-direction: column; /* عرض النصوص عموديًا */
+  gap: px; /* المسافة بين النصوص */
+}
+
+.card2 .content2 {
+  display: flex;
+  height: 38%; /* الجزء الأبيض يمثل 40% من الكارد */
+  justify-content: space-between; /* توزيع العناصر أفقيًا */
+  align-items: center; /* محاذاة عمودية */
+  padding: 19px; /* المسافه الداخليه داخل الكارد */
+}
+
+.card2 .text2 {
+  display: flex;
+  flex-direction: column; /* عرض النصوص عموديًا */
+  gap: 8px; /* المسافة بين النصوص */
+}
+
+.card2 h3 {
+  font-size: 32px; /* حجم عنوان الكارد */
+
+  font-weight: 700; /* سمك الخط */
+
+  position: relative; /* لجعل الحركات تعمل */
+  top: -3px; /* لتحريك العنوان لأعلى */
+  left: -9px; /* لتحريك العنوان إلى اليمين */
+
+  margin: 0 0 8px 0; /* إزالة الهوامش العلوية والجانبية وجعل الهامش السفلي 8px */
+}
+
+.card2 p {
+font-size: 14px; /* حجم النص */
+  /*                font-weight: bold;*/
+  font-family: Inter;
+  color: black; /* لون النص */
+  margin: 0; /* إزالة الهوامش */
+  margin: -15px 0 0 0;
+  line-height: 10px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+  line-height: 21px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
+  word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+
+  word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
+  white-space: normal; /* يسمح بتفصيل النص على أكثر من سطر */
+  width: 100%; /* تأكد من أن النص يأخذ المساحة بالكامل */
+}
+
+.card2 .price {
+  font-size: 40px; /* حجم النص */
+  font-weight: bold; /* سمك النص */
+  color: black; /* لون السعر */
+  margin: 0;
+  font-weight: bold; /* سمك النص */
+
+  text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+  position: relative;
+  top: 47px; /* لتحريكه لأسفل */
+  left: 30px; /* لتحريكه لليمين */
+  font-family: Cormorant Upright;
+}
+
+.card2 .stars2 {
+  color: #ffb854; /* لون النجوم */
+  font-weight: bold;
+  color: #ffb854; /* لون النجوم */
+  font-size: 20px; /* حجم النجوم - يمكنك زيادته أو تقليله */
+  position: relative; /* لجعل تأثير التحريك يعمل */
+  top: -10px; /* تحريك النجوم لأسفل - يمكنك تعديل القيمة حسب الحاجة */
+}
+
+.btn2:hover {
+  background-color: #ffcd63;
+}
+h2{
+  color: aliceblue;
+}
+
+.card2 .heart2 {
+  width: 59px;
+  height: 49px;
+  font-size: 11px; /* حجم النص */
+  color: black; /* لون السعر */
+
+  font-weight: bold; /* سمك النص */
+
+  text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
+
+  position: relative;
+  top: -34px; /* لتحريكه لأسفل */
+  left: -10px; /* لتحريكه لليمين */
+}

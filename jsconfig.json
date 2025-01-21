@@ -8,7 +8,7 @@
   },
   "include": [
     "src"
-  ],
+, "tasks/Reservation"  ],
   "exclude": [
     "node_modules",
     "build"

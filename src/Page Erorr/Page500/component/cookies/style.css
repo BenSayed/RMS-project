@@ -1,0 +1,46 @@
+body {
+  display: flex; /* محاذاة المحتوى أفقيًا */
+  justify-content: center; /* توسيط العنصر أفقيًا */
+  align-items: center; /* توسيط العنصر عموديًا */
+  height: 100vh; /* ارتفاع الشاشة بالكامل */
+  background-color: #f9f9f9; /* لون الخلفية */
+  margin: 0; /* إزالة أي مسافات خارجية */
+}
+
+/* الحاوية الرئيسية للكوكيز */
+.container {
+  position: relative; /* ضروري لتحديد المواقع */
+  width: 200px; /* عرض الحاوية */
+  height: 200px; /* ارتفاع الحاوية */
+}
+
+/* إعدادات الكوكي الثابتة */
+#static-cookie {
+  position: absolute; /*  موقع الصورة */
+  top: 50%; /* توسيط عموديًا */
+  left: 50%; /* توسيط أفقيًا */
+  transform: translate(-50%, -50%); /* لتصحيح الموقع */
+  width: 300px; /* حجم الكوكيز*/
+}
+
+/* إعدادات الكوكيز المتحركة */
+#moving-cookie {
+  position: absolute; /* لتحديد موقع الصورة */
+  top: 50%; /* توسيط عموديًا */
+  left: 0; /* البداية من اليسار */
+  width: 300px; /* حجم الكوكيز المتحركة */
+  animation: rotate 2s linear infinite; /*  حركة الدوران */
+}
+
+/* حركة الدوران */
+@keyframes rotate {
+  0% {
+    transform: translate(0, -50%) rotate(0deg); /* البداية */
+  }
+  50% {
+    transform: translate(150px, -50%) rotate(180deg); /* المنتصف */
+  }
+  100% {
+    transform: translate(0, -50%) rotate(0deg); /* العودة للبداية */
+  }
+}

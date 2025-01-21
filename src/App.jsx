@@ -7,21 +7,30 @@ import Header from "./Component/Header/Header";
 import Login from "./LoginPage/login/login";
 import SignUp from "./LoginPage/Sign up/SignUp";
 import ExploreMenu from "./page-index/MenuPage/ExploreMenu";
+import FOOTER from "./Component/FOOTER/FOOTER.jsx";
+import Reservation from "./page-index/Reservation/reservation";
+import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
+
 
 function App() {
   return (
     <>
+   
       <div>
-        <Header />
+        {/* <Countact /> */}
+        {/* <WaitingPage/> */}
+        <PageErorr500/>
+        {/* <Erorr404/> */}
+        {/* <Home /> */}
+        {/* <Reservation /> */}
+        {/* <MenuComponent/> */}
+        
+        {/* <Login/> */}
+        {/* <SignUp/> */}
+        {/* <ExploreMenu /> */}
+        <br/>
       </div>
-      {/* <Countact /> */}
-      {/* <WaitingPage/> */}
-      {/* <PageErorr500/> */}
-      {/* <Erorr404/> */}
-      {/* <Home/> */}
-      {/* <Login/> */}
-      {/* <SignUp/> */}
-      <ExploreMenu />
+     
     </>
   );
 }
