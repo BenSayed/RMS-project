@@ -10,27 +10,31 @@ import ExploreMenu from "./page-index/MenuPage/ExploreMenu";
 import FOOTER from "./Component/FOOTER/FOOTER.jsx";
 import Reservation from "./page-index/Reservation/reservation";
 import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
+import SalesPages from "./Sales pages/pageSales1/SalesPages";
 
 
 function App() {
   return (
     <>
    
-      <div>
+
+        <Header />
         {/* <Countact /> */}
         {/* <WaitingPage/> */}
-        <PageErorr500/>
+        {/* <PageErorr500/> */}
         {/* <Erorr404/> */}
         {/* <Home /> */}
+        <SalesPages/>
+ 
         {/* <Reservation /> */}
         {/* <MenuComponent/> */}
-        
+
         {/* <Login/> */}
         {/* <SignUp/> */}
         {/* <ExploreMenu /> */}
-        <br/>
-      </div>
-     
+   
+   
+      <FOOTER/>
     </>
   );
 }

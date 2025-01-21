@@ -1,11 +1,11 @@
-body {
+/* body {
   display: flex; /* محاذاة المحتوى أفقيًا */
   justify-content: center; /* توسيط العنصر أفقيًا */
   align-items: center; /* توسيط العنصر عموديًا */
   height: 100vh; /* ارتفاع الشاشة بالكامل */
   background-color: #f9f9f9; /* لون الخلفية */
   margin: 0; /* إزالة أي مسافات خارجية */
-}
+} */
 
 /* الحاوية الرئيسية للكوكيز */
 .container {
