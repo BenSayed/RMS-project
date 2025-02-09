@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import ErrorNumber from "./ErrorNumber";
-import BurgerLayers from "./BurgerLayers";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const BoxText = () => {
@@ -18,7 +17,6 @@ const BoxText = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <BurgerLayers />
           </div>
           <div className=" masseg">
             <h1>Page not found</h1>

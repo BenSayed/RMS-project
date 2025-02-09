@@ -11,6 +11,7 @@ import FOOTER from "./Component/FOOTER/FOOTER.jsx";
 import Reservation from "./page-index/Reservation/reservation";
 import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
 import SalesPages from "./Sales pages/pageSales1/SalesPages";
+import AboutPage from "./page-index/About/aboutPage";
 
 
 function App() {
@@ -18,14 +19,19 @@ function App() {
     <>
    
 
-        <Header />
+        {/* <Header /> */}
         {/* <Countact /> */}
         {/* <WaitingPage/> */}
         {/* <PageErorr500/> */}
         {/* <Erorr404/> */}
         {/* <Home /> */}
-        <SalesPages/>
+        {/* <SalesPages/> */}
+ {/* <AboutPage/> */}
+ {/* <Erorr404/> */}
+ <PageErorr500/>
+
  
+
         {/* <Reservation /> */}
         {/* <MenuComponent/> */}
 
@@ -34,7 +40,7 @@ function App() {
         {/* <ExploreMenu /> */}
    
    
-      <FOOTER/>
+      {/* <FOOTER/> */}
     </>
   );
 }

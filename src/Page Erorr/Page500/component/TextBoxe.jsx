@@ -1,5 +1,5 @@
-import Button from '@mui/material/Button/Button';
- import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import Button from "@mui/material/Button/Button";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 const TextBoxe = () => {
   return (
     <div>
@@ -37,6 +37,6 @@ const TextBoxe = () => {
       </div>
     </div>
   );
-}
+};
 
 export default TextBoxe;
