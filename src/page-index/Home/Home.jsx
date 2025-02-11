@@ -9,11 +9,26 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      <section>
+        {" "}
+        <Section1 />{" "}
+      </section>
+      <section>
+        {" "}
+        <Section2 />
+      </section>
+      <section className="section3">
+        {" "}
+        <Section3 />
+      </section>
+      <section>
+        {" "}
+        <Section4 />{" "}
+      </section>
+      <section>
+        {" "}
+        <Section5 />{" "}
+      </section>
     </div>
   );
 };

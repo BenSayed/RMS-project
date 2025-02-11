@@ -21,14 +21,13 @@ const Section1 = () => {
         </div>
 
         <div className="container">
-          <div className="search-bar">
+          <div className="search-bar12">
             <input
               type="text"
-              className="search-input"
+              className="search-input12"
               placeholder="Search..."
             />
             <button className="mic-button">
-             
               <img src="src/page-index/Home/section-1/Vector.svg" alt="" />
             </button>
           </div>

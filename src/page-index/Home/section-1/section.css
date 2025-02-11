@@ -60,7 +60,7 @@
   top: -588rem;
 }
 
-.search-bar {
+.search-bar12 {
   display: flex;
   align-items: center;
   background-color: #fff5eb;
@@ -68,9 +68,10 @@
   margin-bottom: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  margin-top: 45rem;
 }
 
-.search-input {
+.search-input12 {
   width: 640px;
   height: 46px;
   flex: 1;
@@ -125,22 +126,20 @@ button.mic-button {
   border-radius: 16px;
   cursor: pointer;
 }
-
 /* Media Queries */
 
 /* For screens with width 984px */
-@media  (max-width: 984px)   {
-
+@media (max-width: 984px) {
   .section1 {
     min-height: 850px;
     height: auto;
   }
   .textconteiner h1 {
-    font-size: 120px; 
+    font-size: 120px;
   }
 
   .textconteiner p {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .cotiner_img img {
@@ -167,7 +166,6 @@ button.mic-button {
 
 /* For screens with width 646px */
 @media screen and (max-width: 646px) {
-  
   .container {
     margin-top: 30px;
   }

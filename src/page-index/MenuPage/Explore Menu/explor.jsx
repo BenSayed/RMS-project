@@ -25,7 +25,10 @@ const MenuComponent = () => {
             </ul>
           </div>
           <div className="price-section2">
-            <img src="dish-image.jpg" alt="Lunch Offer Image" />
+            <img
+              src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+              alt="Lunch Offer Image"
+            />
             <p className="price2">84$</p>
             <a href="#" className="order-btn2">
               Order Now
@@ -39,9 +42,15 @@ const MenuComponent = () => {
           <div className="cards2">
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
-              <img src="./Rectangle 1153.svg" alt="Wagyu Steak" />
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt="Wagyu Steak"
+              />
               <div className="content2">
                 <div className="text2">
                   <h3>Wagyu Steak</h3>
@@ -54,9 +63,15 @@ const MenuComponent = () => {
 
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
-              <img src="./Rectangle 1153.svg" alt="Lobster Roll" />
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt="Lobster Roll"
+              />
               <div className="content2">
                 <div className="text2">
                   <h3>Wagyu Steak</h3>
@@ -69,9 +84,15 @@ const MenuComponent = () => {
 
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
-              <img src="./Rectangle 1153.svg" alt="Pasta Carbonara" />
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt="Pasta Carbonara"
+              />
               <div className="content2">
                 <div className="text2">
                   <h3>Wagyu Steak</h3>
@@ -84,7 +105,10 @@ const MenuComponent = () => {
 
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
               <img src="./Rectangle 1153.svg" alt="Cheesecake" />
               <div className="content2">
@@ -105,9 +129,15 @@ const MenuComponent = () => {
           <div className="cards2">
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
-              <img src="./Rectangle 1153.svg" alt="Wagyu Steak" />
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt="Wagyu Steak"
+              />
               <div className="content2">
                 <div className="text2">
                   <h3>Wagyu Steak</h3>
@@ -120,9 +150,15 @@ const MenuComponent = () => {
 
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
-              <img src="./Rectangle 1153.svg" alt="Lobster Roll" />
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt="Lobster Roll"
+              />
               <div className="content2">
                 <div className="text2">
                   <h3>Wagyu Steak</h3>
@@ -135,9 +171,15 @@ const MenuComponent = () => {
 
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
-              <img src="./Rectangle 1153.svg" alt="Pasta Carbonara" />
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt="Pasta Carbonara"
+              />
               <div className="content2">
                 <div className="text2">
                   <h3>Wagyu Steak</h3>
@@ -150,9 +192,15 @@ const MenuComponent = () => {
 
             <div className="card2">
               <div className="heart2">
-                <img src="solar_heart-bold (1).svg" alt="Lobster Roll" />
+                <img
+                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                  alt="Lobster Roll"
+                />
               </div>
-              <img src="./Rectangle 1153.svg" alt="Cheesecake" />
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt="Cheesecake"
+              />
               <div className="content2">
                 <div className="text2">
                   <h3>Wagyu Steak</h3>

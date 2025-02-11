@@ -1,25 +1,94 @@
 /* CSS File (Testimonials.css) */
 
 .testimonials {
-  font-family: 'Arial', sans-serif;
+  font-family: "Inter", serif;
   color: #333;
   padding: 20px;
   background-color: #fff8f0;
 }
+.testimonial-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
+/* البطاقة الرئيسية */
+.main-card {
+  width: 200%;
+  max-width: 900px;
+  border-radius: 1.5rem;
+  background-color: #fff8f0;
+
+  overflow: hidden;
+}
+
+h2.svg {
+  height: 10px;
+  display: flex;
+}
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-header h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  font-family: "Cormorant Upright", serif;
+}
+
+.card-header .highlight {
+  color: #f39c0f;
+}
+
+.card-header p {
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* الصورة */
+.image-container {
+  position: relative;
+  width: 5000px; /* تأكد من ضبط العرض المناسب */
+  max-width: 5000px; /* يمكنك تعديله حسب الحاجة */
+  border-radius: 10px; /* يضيف الحواف المستديرة */
+  overflow: hidden;
+}
+.image-container img {
+  width: 850px;
+  height: 250%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: -280px;
+}
+
+.stats {
+  text-align: right;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: -6rem;
+  margin-left: 580px;
+  position: relative;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77.45px;
+  letter-spacing: 0%;
+  text-align: center;
+}
 .testimonials-header {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .testimonials-header .highlight {
-  color: #f39c12;
+  color: #f19a0e;
   font-weight: bold;
-}
-
-.testimonials-header .heart {
-  color: #ff6b6b;
-  font-size: 1.5rem;
 }
 
 .testimonials-content {
@@ -31,10 +100,11 @@
 
 .image-section {
   width: 700px;
-            height: 500px;}
-svg{
-  width: 100%;
-            height: 100%;;
+  height: 500px;
+}
+svg {
+  width: 90px;
+  height: 10%;
 }
 
 .burger-image {
@@ -86,7 +156,7 @@ svg{
 
 .review {
   background-color: #1c1c1c; /* لون خلفية البطاقة الداكن */
-  padding: 30px ; /* مسافة داخلية */
+  padding: 30px; /* مسافة داخلية */
   border-radius: 25px; /* زوايا دائرية */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل لإبراز البطاقة */
   color: #ffffff; /* لون النص */
@@ -94,13 +164,18 @@ svg{
   flex-direction: column;
   gap: 15px; /* مسافة بين العناصر */
   width: 576px; /* عرض البطاقة */
-  margin-bottom:16px ;
+  margin-bottom: 16px;
 }
 
 .review .stars {
-  color: #ffc107; /* لون النجوم */
-  font-size: 1.5rem;
-  font-weight:900;
+  color: #ffb854; /* لون النجوم */
+  font-size: 25px;
+  font-weight: 900;
+  width: 20;
+  height: 19;
+  top: 2px;
+  left: 2px;
+  border-radius: 5px;
 }
 
 .review p {
@@ -152,15 +227,14 @@ svg{
 .cta-section h2 {
   font-size: 1.5rem;
   margin-bottom: 0;
-    margin-left:15px ;
-
+  margin-left: 15px;
 }
 
 .join-button {
-  background-color: #f1c987;
+  background-color: #ffdeb0;
   color: #000000;
   border: none;
-  margin-right:15px ;
+  margin-right: 15px;
   padding: 5px 5px 5px 15px;
   border-radius: 15px;
   cursor: pointer;

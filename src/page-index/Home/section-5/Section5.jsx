@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./Section5.css";
+import { Heart, ArrowRight } from "lucide-react"; // استيراد الأيقونات
 
 const Section5 = () => {
   const reviewsRef = useRef(null);
@@ -36,10 +37,39 @@ const Section5 = () => {
   return (
     <section className="testimonials">
       <div className="testimonials-content">
-        <div className="image-section">
-          <img src="public/IMEG/Frame 38175.png" alt="Testimonials" />
-          <div className="likes">+8.4k</div>
+        <div className="main-card">
+          <div className="card-content">
+            <div className="image-container">
+              {" "}
+              <div className="card-header">
+                <h2>Hear from our</h2>
+                <h2 className="highlight">Satisfied Clients</h2>
+                <h2>
+                  have to say
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    fontSize={5}
+                    fill="rgb(243, 156, 16)"
+                    width="10"
+                    height="10"
+                  >
+                    <path d="M50 91C48.6 91 47.2 90.6 46 89.8C25.9 76.1 10 61.4 10 41.7C10 29.6 20.6 19 32.7 19C39.3 19 45.3 22.1 49 27.4C52.7 22.1 58.7 19 65.3 19C77.4 19 88 29.6 88 41.7C88 61.4 72.1 76.1 52 89.8C50.8 90.6 49.4 91 48 91Z" />
+                  </svg>
+                </h2> 
+              </div>
+              <img
+                src="src/page-index/Home/section-5/Subtract (1).svg"
+                alt="burger"
+              />
+            </div>
+
+            <div className="stats">
+              <p>+8.4k</p>
+            </div>
+          </div>
         </div>
+
         <div
           className="reviews-section"
           ref={reviewsRef}
@@ -58,8 +88,8 @@ const Section5 = () => {
             </p>
             <div className="review-footer">
               <img
-                src="mark-profile.jpg"
-                alt="Mark Larrat"
+                src="src/page-index/Home/section-5/Rectangle 1161.svg"
+                alt="Cameron Williamson"
                 className="profile-image"
               />
               <div className="reviewer-info">
@@ -77,7 +107,7 @@ const Section5 = () => {
             </p>
             <div className="review-footer">
               <img
-                src="public/IMEG/f983f47c-90a7-415f-bcfd-bb489ab674b7.jpg"
+                src="src/page-index/Home/section-5/Rectangle 1161.svg"
                 alt="Cameron Williamson"
                 className="profile-image"
               />
@@ -96,7 +126,7 @@ const Section5 = () => {
             </p>
             <div className="review-footer">
               <img
-                src="public/IMEG/f983f47c-90a7-415f-bcfd-bb489ab674b7.jpg"
+                src="src/page-index/Home/section-5/Rectangle 1161.svg"
                 alt="Cameron Williamson"
                 className="profile-image"
               />
@@ -115,7 +145,7 @@ const Section5 = () => {
             </p>
             <div className="review-footer">
               <img
-                src="public/IMEG/f983f47c-90a7-415f-bcfd-bb489ab674b7.jpg"
+                src="src/page-index/Home/section-5/Rectangle 1161.svg"
                 alt="Cameron Williamson"
                 className="profile-image"
               />
@@ -130,7 +160,12 @@ const Section5 = () => {
       <div className="cta-section">
         <h2>Are u The Next One!</h2>
         <button className="join-button">
-          Join Now <img src="public/IMEG/Frame 38176.png" alt="" width={30} />
+          Join Now{" "}
+          <img
+            src="src/page-index/Home/section-5/Frame 38176.svg "
+            alt=""
+            width={30}
+          />
         </button>
       </div>
     </section>
