@@ -11,7 +11,6 @@ function Login() {
 
   return (
     <div>
-      <Header />
       <section className="sectionlogin">
         <div className="PageLogin">
           <div className="PageLogincontainer">

@@ -6,9 +6,14 @@ import Header from "/src/Component/Header/Header";
 const Erorr404 = () => {
   return (
     <div>
-      <div>
-        <img className="img1" src="./public/IMEG/Elements.svg " alt="Erorr" />
-        <BurgerLayers />
+      <img className="img1" src="./public/IMEG/Elements.svg " alt="Erorr" />
+
+      <div className="pageeror">
+        <div className="burge">
+          {" "}
+          <BurgerLayers />{" "}
+        </div>
+
         <BoxText />
       </div>
     </div>

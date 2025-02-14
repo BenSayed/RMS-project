@@ -148,7 +148,7 @@ button.mic-button {
     margin-top: 0;
   }
 
-  .search-input {
+  .search-input12 {
     width: 500px;
     height: 46px;
     font-size: 15px;
@@ -183,7 +183,7 @@ button.mic-button {
     margin-top: 0;
   }
 
-  .search-input {
+  .search-input12 {
     width: 350px;
     height: 46px;
     font-size: 14px;
@@ -218,7 +218,7 @@ button.mic-button {
     margin-top: 0;
   }
 
-  .search-input {
+  .search-input12 {
     width: 100%;
     font-size: 13px;
     height: 36px;
@@ -254,7 +254,7 @@ button.mic-button {
     height: 40%; /* تقليل حجم الصورة في الشاشات الصغيرة */
   }
 
-  .search-input {
+  .search-input12 {
     width: 250px;
     height: 46px;
     font-size: 12px;

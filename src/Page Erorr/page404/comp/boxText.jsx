@@ -16,11 +16,9 @@ const BoxText = () => {
               left: "50%",
               transform: "translate(-50%, -50%)",
             }}
-          >
-          </div>
-          <div className=" masseg">
-            <h1>Page not found</h1>
-            <h1>We working on it</h1>
+          ></div>
+          <div className="masseg8888">
+            <h2>Page not found <br /> We working on it</h2>
 
             <Button
               endIcon={<ChevronLeftIcon />}

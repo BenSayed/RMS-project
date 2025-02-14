@@ -7,11 +7,13 @@ import Header from "./Component/Header/Header";
 import Login from "./LoginPage/login/login";
 import SignUp from "./LoginPage/Sign up/SignUp";
 import ExploreMenu from "./page-index/MenuPage/ExploreMenu";
-// import FOOTER from "./Component/FOOTER/FOOTER.jsx";
+import FOOTER from "./Component/FOOTER/FOOTER.jsx";
 import Reservation from "./page-index/Reservation/reservation";
 import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
 import SalesPages from "./Sales pages/pageSales1/SalesPages";
 import AboutPage from "./page-index/About/aboutPage";
+import ChefuiPage from "./page-index/chiefUiPage/chefuiPage";
+ 
  
     
    
@@ -20,19 +22,21 @@ import AboutPage from "./page-index/About/aboutPage";
 function App() {
   return (
     <>
-      {/* <App9/> */}
-      <Header />
+{/*  
+      <Header /> */}
       {/* <Appppp/> */}
       {/* <Countact /> */}
       {/* <WaitingPage/> */}
       {/* <PageErorr500/> */}
       {/* <Erorr404/> */}
-      <Home />
+      {/* <Home /> */}
+      {/* <App9/> */}
+      <ChefuiPage/>/
       {/* <SalesPages/> */}
       {/* <AboutPage/> */}
       {/* <Erorr404/> */}
       {/* <PageErorr500/> */}
-      {/* <Section5/> */}
+ 
       {/* <Reservation /> */}
       {/* <MenuComponent/> */}
       {/* <Login/> */}

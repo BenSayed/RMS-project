@@ -1,4 +1,3 @@
-
 .img1 {
   width: 100%;
   margin: 0 auto;
@@ -43,8 +42,14 @@
 .button1 {
   background-color: var(--coler_2);
 }
-.masseg p,
-h1 {
+.masseg8888 h2 {
   color: white;
   font-family: "Cormorant Upright", serif;
+  font-size: 35px;
+  margin-top: 5px;
+ 
+}
+.pageeror {
+  position: relative;
+  top: -40px;
 }
