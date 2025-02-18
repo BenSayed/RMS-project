@@ -1,0 +1,88 @@
+.slider-container {
+    position: relative;
+    width: 950px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slider-image {
+    width: 100%;
+    display: block;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background: rgba(0, 0, 0, 0); /* تأثير عند التمرير */
+ }
+  
+  .nav-button.left {
+    left: 10px;
+  }
+  
+  .nav-button.right {
+    right: 10px;
+  }
+  
+ 
+.nav-button::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 5px;
+    transform: rotate(45deg);
+  }
+  
+ 
+  .nav-button.left::before {
+    transform: rotate(135deg);  
+ }
+  
+  .nav-button.right::before {
+    transform: rotate(-45deg);  
+  }
+  
+ 
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+  }
+  
+  .dot {
+    height: 7px;
+    width: 7px;
+    background-color: #FFF4E6;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color:#FFB854;
+    transform: scale(1.2);
+  }  
+  

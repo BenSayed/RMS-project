@@ -13,7 +13,7 @@ const ChefuiPage = () => {
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentTime(new Date().toLocaleTimeString());
-      }, 1000); // تحديث الوقت كل ثانية
+      }, 1000); // تحديث الوقت كل ثانية 
 
       return () => clearInterval(timer); // تنظيف المؤقت عند إلغاء التثبيت
     }, []);
@@ -61,15 +61,9 @@ const ChefuiPage = () => {
       items: 4,
       icon: "src/page-index/chiefUiPage/Vector (4).svg",
     },
+   
     {
       id: 2,
-      image: "src/page-index/chiefUiPage/Rectangle 1153.svg",
-      title: "fd54es",
-      items: 4,
-      icon: "src/page-index/chiefUiPage/Vector (5).svg",
-    },
-    {
-      id: 3,
       image: "src/page-index/chiefUiPage/Rectangle 1153.svg",
       title: "fd54es",
       items: 7,

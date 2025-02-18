@@ -6,9 +6,12 @@
   --coler_2: #ff9500;
 }
 * {
+  padding-right: 88px;
+  padding-left: 88px;
   margin: 2px;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {

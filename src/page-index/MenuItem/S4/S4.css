@@ -1,0 +1,137 @@
+.container{
+  margin-top: 1200px;
+}
+
+/* العنوان */
+.title {
+  font-family: Cormorant Upright;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48.44px;
+  letter-spacing: 0%;
+  color: #FFF4E6;
+  margin-left: -900px;
+}
+
+
+/* الحاوية الرئيسية للبطاقات */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-container .food-card:nth-child(5) {
+  grid-column: 2 / span 2;
+}
+
+/* تصميم البطاقة */
+.food-card {
+  background: #fff4e6;
+
+  border-radius: 48px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  width: 400px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+/* صورة الطعام */
+.food-image {
+  width: 170px;
+  height: 200px;
+  padding: 0%;
+  margin: -15px;
+  border-radius: 48px 0 0 48px;
+  object-fit: cover;
+}
+
+/* معلومات الطعام */
+.food-info {
+  margin-left: -20px;
+  flex: 1;
+  margin-left: 16px;
+  text-align: left;
+}
+
+/* اسم الطبق */
+.food-title {
+  font-family: Cormorant Upright;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 38.75px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #151716;
+  margin-top: 15px;
+ 
+}
+
+/* وصف الطبق */
+.food-description {
+  font-size: 14px;
+  color: gray;
+  margin-top: -14px;
+  margin-left: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  letter-spacing: 0%;
+}
+
+/* السعر */
+.food-price {
+  font-family: Cormorant Upright;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48.44px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #151716;
+  margin-top: -30px;
+  
+}
+
+/* النجوم */
+.stars {
+  display: flex;
+  margin: 8px 30px;
+}
+
+.star {
+  font-size: 25px;
+  cursor: pointer;
+  color: #ffb854;
+  transition: color 0.2s ease;
+  margin-top: -15px;
+  width: 20;
+  height: 19;
+  top: 2px;
+  left: 2px;
+  border-radius: 1px;
+  padding: 1px;
+}
+
+ 
+
+/* تكبير العنصر الأخير ليكون بنفس محاذاة الصورة */
+@media (max-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-container .food-card:nth-child(5) {
+    grid-column: auto;
+  }
+}

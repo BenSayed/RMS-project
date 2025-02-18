@@ -3,6 +3,7 @@ import Section2 from "./section-2/section2";
 import Section3 from "./section-3/section3";
 import Section4 from "./section-4/section4";
 import Section5 from "./section-5/Section5";
+
 import Header from "/src/Component/Header/Header";
 import React from "react";
 

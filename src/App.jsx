@@ -13,31 +13,25 @@ import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
 import SalesPages from "./Sales pages/pageSales1/SalesPages";
 import AboutPage from "./page-index/About/aboutPage";
 import ChefuiPage from "./page-index/chiefUiPage/chefuiPage";
- 
- 
-    
-   
-
+import MenuItem from "./page-index/MenuItem/Menu";
 
 function App() {
   return (
     <>
-{/*  
-      <Header /> */}
-      {/* <Appppp/> */}
+      {/* <Header />
+       */}
       {/* <Countact /> */}
       {/* <WaitingPage/> */}
       {/* <PageErorr500/> */}
       {/* <Erorr404/> */}
       {/* <Home /> */}
       {/* <App9/> */}
-      <ChefuiPage/>/
       {/* <SalesPages/> */}
       {/* <AboutPage/> */}
       {/* <Erorr404/> */}
       {/* <PageErorr500/> */}
- 
-      {/* <Reservation /> */}
+      {/* <MenuItem />  */}
+      {/* <Reservation />
       {/* <MenuComponent/> */}
       {/* <Login/> */}
       {/* <SignUp/> */}

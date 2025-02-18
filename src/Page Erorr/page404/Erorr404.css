@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
   gap: 4rem;
-  margin-top: -2rem;
+  margin-top: 7rem;
 }
 
 .number {
@@ -46,7 +46,7 @@
   color: white;
   font-family: "Cormorant Upright", serif;
   font-size: 35px;
-  margin-top: 5px;
+  margin-top: -100px;
  
 }
 .pageeror {
