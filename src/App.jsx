@@ -13,18 +13,19 @@ import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
 import SalesPages from "./Sales pages/pageSales1/SalesPages";
 import AboutPage from "./page-index/About/aboutPage";
 import ChefuiPage from "./page-index/chiefUiPage/chefuiPage";
-import MenuItem from "./page-index/MenuItem/Menu";
+import DeliveryLogin from "./page-index/Delivery pages/DeliveryLogin";
+import DeliveryHome from "./page-index/Delivery pages/Delivery Home/DeliveryHome";
 
 function App() {
   return (
     <>
-      {/* <Header />
-       */}
+      <Header />
       {/* <Countact /> */}
       {/* <WaitingPage/> */}
       {/* <PageErorr500/> */}
       {/* <Erorr404/> */}
       {/* <Home /> */}
+      {/* <OrderPage/> */}
       {/* <App9/> */}
       {/* <SalesPages/> */}
       {/* <AboutPage/> */}
@@ -34,8 +35,11 @@ function App() {
       {/* <Reservation />
       {/* <MenuComponent/> */}
       {/* <Login/> */}
+      <DeliveryHome />
       {/* <SignUp/> */}
       {/* <ExploreMenu /> */}
+      {/* <ChefuiPage/> */}
+      {/* <DeliveryLogin/> */}
       {/* <FOOTER/> */}
     </>
   );

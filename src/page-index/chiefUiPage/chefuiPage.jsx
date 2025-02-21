@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./chefuiPage.css";
+import { Pagination } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ChefuiPage = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -13,7 +16,7 @@ const ChefuiPage = () => {
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentTime(new Date().toLocaleTimeString());
-      }, 1000); // تحديث الوقت كل ثانية 
+      }, 1000); // تحديث الوقت كل ثانية
 
       return () => clearInterval(timer); // تنظيف المؤقت عند إلغاء التثبيت
     }, []);
@@ -61,7 +64,7 @@ const ChefuiPage = () => {
       items: 4,
       icon: "src/page-index/chiefUiPage/Vector (4).svg",
     },
-   
+
     {
       id: 2,
       image: "src/page-index/chiefUiPage/Rectangle 1153.svg",
@@ -160,22 +163,31 @@ const ChefuiPage = () => {
             <div className="chifNewOrdersText">
               <h3>New Orders</h3>
             </div>
-            <div className="cardallchifuipageprosser">
+
+            <Swiper
+              spaceBetween={-250}
+              direction={"vertical"}
+              className="mySwiper"
+            >
               {newOrdersData.map((card) => (
-                <div key={card.id} className="cardchifuipageprosser">
-                  <div className="cardchifuipageprosserImg">
-                    <img src={card.image} alt={card.title} />
+                <SwiperSlide key={card.id}>
+                  <div className="cardallchifuipageprosser">
+                    <div className="cardchifuipageprosser">
+                      <div className="cardchifuipageprosserImg">
+                        <img src={card.image} alt={card.title} />
+                      </div>
+                      <div className="cardchifuipageprosserTextt">
+                        <h3>{card.title}</h3>
+                        <p>{card.items} items</p>
+                      </div>
+                      <div className="cardchifuipageprosserIcon">
+                        <img src={card.icon} alt="Icon" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="cardchifuipageprosserTextt">
-                    <h3>{card.title}</h3>
-                    <p>{card.items} items</p>
-                  </div>
-                  <div className="cardchifuipageprosserIcon">
-                    <img src={card.icon} alt="Icon" />
-                  </div>
-                </div>
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
           </div>
 
           <div>
@@ -191,22 +203,28 @@ const ChefuiPage = () => {
             <div className="chifInProgressText">
               <h3>In Progress</h3>
             </div>
-            <div className="cardallchifuipageprosser">
+            <Swiper
+              spaceBetween={-250}
+              direction={"vertical"}
+              className="mySwiper"
+            >
               {inProgressData.map((card) => (
-                <div key={card.id} className="cardchifuipageprosser">
-                  <div className="cardchifuipageprosserImg">
-                    <img src={card.image} alt={card.title} />
+                <SwiperSlide key={card.id}>
+                  <div className="cardchifuipageprosser">
+                    <div className="cardchifuipageprosserImg">
+                      <img src={card.image} alt={card.title} />
+                    </div>
+                    <div className="cardchifuipageprosserTextt">
+                      <h3>{card.title}</h3>
+                      <p>{card.items} items</p>
+                    </div>
+                    <div className="cardchifuipageprosserIcon">
+                      <img src={card.icon} alt="Icon" />
+                    </div>
                   </div>
-                  <div className="cardchifuipageprosserTextt">
-                    <h3>{card.title}</h3>
-                    <p>{card.items} items</p>
-                  </div>
-                  <div className="cardchifuipageprosserIcon">
-                    <img src={card.icon} alt="Icon" />
-                  </div>
-                </div>
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
           </div>
           <img
             className="imgchipborder0"
@@ -219,22 +237,28 @@ const ChefuiPage = () => {
             <div className="chifReadytoServeText">
               <h3>Ready to Serve</h3>
             </div>
-            <div className="cardallchifuipageprosser">
+            <Swiper
+              spaceBetween={-250}
+              direction={"vertical"}
+              className="mySwiper"
+            >
               {readyToServeData.map((card) => (
-                <div key={card.id} className="cardchifuipageprosser">
-                  <div className="cardchifuipageprosserImg">
-                    <img src={card.image} alt={card.title} />
+                <SwiperSlide key={card.id}>
+                  <div className="cardchifuipageprosser">
+                    <div className="cardchifuipageprosserImg">
+                      <img src={card.image} alt={card.title} />
+                    </div>
+                    <div className="cardchifuipageprosserTextt">
+                      <h3>{card.title}</h3>
+                      <p>{card.items} items</p>
+                    </div>
+                    <div className="cardchifuipageprosserIcon">
+                      <img src={card.icon} alt="Icon" />
+                    </div>
                   </div>
-                  <div className="cardchifuipageprosserTextt">
-                    <h3>{card.title}</h3>
-                    <p>{card.items} items</p>
-                  </div>
-                  <div className="cardchifuipageprosserIcon">
-                    <img src={card.icon} alt="Icon" />
-                  </div>
-                </div>
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
           </div>
         </div>
       </section>

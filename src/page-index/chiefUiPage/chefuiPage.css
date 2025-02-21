@@ -1,12 +1,16 @@
 .chifuipage {
-  height: 800px;
+  height: 100vh;
+  width: 100vw;
   padding-top: 20px;
-  padding-left: 19px;
+  padding-left: 30px;
+  padding-right: 44px;
   background-image: url("public/IMEG/Elements.svg"); /* إضافة صورة الخلفية */
   background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
+  overflow-y: scroll;
 }
 .imgchifpage img {
   height: 100vh;
+  width: 100vw;
 }
 .border {
   border: 1px solid rgb(90, 0, 0);
@@ -38,7 +42,6 @@
   cursor: pointer;
 }
 .chifSelectpage {
-  width: 152px;
   height: 48px;
   padding-left: 17px;
   display: flex; /* استخدام flexbox */
@@ -51,25 +54,8 @@
   border: 1px solid #ff9500;
   background-color: #ff950000;
   color: beige;
-
-  -webkit-appearance: none; /* للسفاري */
-  -moz-appearance: none; /* لفايرفوكس */
-  appearance: none; /* للمصفحات الحديثة */
-
-  /* تعديل المسافات حول النص */
-  font-size: 17px;
-
-  /* تخصيص مظهر السهم الافتراضي */
-  background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 width=%2220%22 height=%2220%22%3E%3Cpath fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%222%22 d=%22M6 7l4 4 4-4%22/%3E%3C/svg%3E")
-    no-repeat right -90px center;
-  background-size: 30px; /* حجم السهم */
-  background-position: right;
-  background-position-x: 100px;
-
- 
 }
- 
- 
+
 .optionselect {
   color: black;
 }
@@ -77,18 +63,18 @@
   display: flex; /* استخدام flexbox */
   justify-content: space-between; /* توزيع العناصر بالتساوي */
   align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
-  margin-left: -10px;
+  width: 100vw;
 }
 .chifNewOrders {
-  width: 440px;
+  width: 33vw;
   height: 569px;
 }
 .chifInProgress {
-  width: 440px;
+  width: 33vw;
   height: 569px;
 }
 .chifReadytoServe {
-  width: 440px;
+  width: 33vw;
   height: 569px;
 }
 .chifNewOrdersText {
@@ -126,37 +112,7 @@
   color: #ff9500;
   padding-bottom: 30px;
 }
-.cardallchifuipageprosser {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  /* تحديد الارتفاع */
-  overflow-x: hidden;
-  overflow-y: scroll; /* شريط تمرير عمودي */
 
-  box-sizing: border-box;
-  max-height: 499px;
-  flex-direction: column; /* عرض الكروت بشكل عمودي */
-}
-
-.cardallchifuipageprosser::-webkit-scrollbar {
-  width: 7px; /* عرض شريط التمرير */
-  height: 40px;
-}
-
-.cardallchifuipageprosser::-webkit-scrollbar-track {
-  background-color: #f1f1f100; /* لون الخلفية لشريط التمرير */
-  border-radius: 10px; /* جعل الحواف دائرية */
-}
-
-.cardallchifuipageprosser::-webkit-scrollbar-thumb {
-  background-color: #4e4e4e; /* لون الجزء الذي يتم سحبه من شريط التمرير */
-  border-radius: 10px; /* جعل الحواف دائرية */
-}
-
-.cardallchifuipageprosser::-webkit-scrollbar-thumb:hover {
-  background-color: #ffffff; /* لون الجزء القابل للسحب عند التمرير عليه */
-}
 .cardchifuipageprosser {
   max-height: 447px;
   width: 415px;
@@ -215,5 +171,11 @@
   text-align: right;
   margin-top: -30px;
   font-family: "Inter", serif;
-margin-right: 20px;
+  margin-right: 20px;
+}
+.imgchipborder {
+  margin-left: -15px;
+}
+.imgchipborder0 {
+  margin: 10px;
 }
