@@ -21,22 +21,13 @@
 }
 .DeliveryHomeCards {
   width: 361px;
-  height: 454px;
-  max-height: 454px;
+
   /* border: 1px solid red; */
   gap: 15px;
   display: flex;
 
   align-items: center;
   flex-direction: column;
-  overflow-y: auto; /* تفعيل التمرير العمودي */
-  overflow-x: hidden; /* إخفاء التمرير الأفقي */
-  /* مسافة داخلية لتجنب تداخل المحتوى مع شريط التمرير */
-  cursor: pointer; /* تغيير المؤشر عند التمرير */
-  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
-  -ms-overflow-style: none; /* إخفاء شريط التمرير في Internet Explorer */
-
-  scroll-behavior: smooth; /* تفعيل التمرير السلس */
 }
 
 .DeliveryHomeCards:active {
@@ -97,16 +88,14 @@
 }
 
 .DeliveryHomeCardContintCircel {
-  position: relative;
-  left: 20.1rem;
-  top: -11.1rem;
+  transform: translate(320px, -25px);
+  position: absolute;
 }
 .DeliveryHomeCardTakawey {
   width: 361px;
 
-  height: 509px;
   /* border: 1px solid seashell; */
-   max-width: 509px;
+  max-width: 509px;
 }
 .DeliveryHomeCardTakaweytext h2 {
   color: #ff9500;
@@ -131,29 +120,14 @@
   height: 90px;
   margin-top: -20px;
 }
-.DeliveryHomeCards2{
+.DeliveryHomeCards2 {
   display: flex;
   gap: 16px;
   flex-direction: column;
-
-  overflow-y: auto; /* تفعيل التمرير العمودي */
-  overflow-x: hidden; /* إخفاء التمرير الأفقي */
-  /* مسافة داخلية لتجنب تداخل المحتوى مع شريط التمرير */
-  cursor: pointer; /* تغيير المؤشر عند التمرير */
-  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
-  -ms-overflow-style: none; /* إخفاء شريط التمرير في Internet Explorer */
-
-  scroll-behavior: smooth; /* تفعيل التمرير السلس */
-
-width: 361px;
-height: 454px;
-gap: 16px;
-
-
-
-
+  width: 361px;
+  gap: 16px;
 }
- 
+
 .DeliveryHomeCardTakaweyCardContenttext h2 {
   font-family: "Inter", serif;
   font-weight: 700;
@@ -170,36 +144,16 @@ gap: 16px;
   line-height: 22.36px;
   letter-spacing: 4%;
   color: #151716;
- 
 }
 .DeliveryHomeCardTakaweyCardContenttext span {
   color: #ff9500;
 }
 
-
-.DeliveryHomeCards3{
+.DeliveryHomeCards3 {
   display: flex;
   gap: 16px;
   flex-direction: column;
-
-  overflow-y: auto; /* تفعيل التمرير العمودي */
-  overflow-x: hidden; /* إخفاء التمرير الأفقي */
-  /* مسافة داخلية لتجنب تداخل المحتوى مع شريط التمرير */
-  cursor: pointer; /* تغيير المؤشر عند التمرير */
-  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
-  -ms-overflow-style: none; /* إخفاء شريط التمرير في Internet Explorer */
-
-  scroll-behavior: smooth; /* تفعيل التمرير السلس */
-
-width: 361px;
-height: 454px;
-gap: 16px;
-
-
-
-
 }
-
 
 .DeliveryHomeCardDoneCardContenttext h2 {
   font-family: "Inter", serif;
@@ -217,7 +171,6 @@ gap: 16px;
   line-height: 22.36px;
   letter-spacing: 4%;
   color: #151716;
- 
 }
 .DeliveryHomeCardDoneCardContenttext span {
   color: #34c759;
@@ -239,7 +192,6 @@ gap: 16px;
 .DeliveryHomeCardDone {
   width: 361px;
 
-  height: 509px;
   /* border: 1px solid seashell; */
-   max-width: 509px;
+  max-width: 509px;
 }

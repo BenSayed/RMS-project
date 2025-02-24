@@ -4,6 +4,12 @@ import "./DeliveryHome.css";
 // DeliveryCard component to avoid repetition
 const DeliveryCard = ({ name, location, status, imgSrc }) => (
   <div className="DeliveryHomeCard">
+    <div className="DeliveryHomeCardContintCircel">
+      <img
+        src="src/page-index/Delivery pages/Delivery Home/Ellipse 1919.svg"
+        alt=""
+      />
+    </div>
     <div className="DeliveryHomeCardContint">
       <div className="DeliveryHomeCardContintttttt">
         <img src={imgSrc} alt={name} />
@@ -15,18 +21,19 @@ const DeliveryCard = ({ name, location, status, imgSrc }) => (
         </div>
       </div>
       <button>Accept</button>
-      <div className="DeliveryHomeCardContintCircel">
-        <img
-          src="src/page-index/Delivery pages/Delivery Home/Ellipse 1919.svg"
-          alt=""
-        />
-      </div>
     </div>
   </div>
 );
 
 const DeliveryHome = () => {
   const cardData = [
+    {
+      name: "Mohamed Ali",
+      location: "Assiut, City, street 24",
+      status: "Ready to deliver",
+      imgSrc:
+        "src/page-index/Delivery pages/Delivery Home/Rectangle 1191 (1).svg",
+    },
     {
       name: "Mohamed Ali",
       location: "Assiut, City, street 24",

@@ -1,0 +1,139 @@
+.coniner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff4e6;
+  padding: 40px;
+  border-radius: 20px;
+  width: 1312px;
+  height: 728px;
+  top: 48px;
+  left: 64px;
+  border-radius: 48px;
+  padding: 24px;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  .coniner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+}
+
+.box h2 {
+  width: 520px;
+  height: 78px;
+  font-family: Cormorant Upright;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77.5px;
+  letter-spacing: 0%;
+  color: #151716;
+  margin-left: -150px;
+}
+
+.code-inputs {
+  display: flex;
+  gap: 23px;
+  margin: 25px 0 ;
+ 
+}
+
+.code-input {
+  text-align: center;
+  border: 1px solid #ff9500;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  background: #fff4e6;
+  width: 66.66666412353516px;
+  height: 52px;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 10px;
+  border-width: 1px;
+}
+
+.resend-text {
+  width: 154;
+  height: 17;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+}
+
+.lin-btn {
+  width: 520px;
+  height: 59px;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 8px;
+  background: #ff9500;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #151716;
+}
+.image-section1
+{
+  margin: 30px 10px 10px -10px;
+}
+.image-section1 img {
+  position: relative;
+  align-items: end;
+  left: -18.5rem;
+  bottom: 0.3rem;
+  gap: 0px;
+  opacity: 0px;
+  background-size: cover;
+  background-position: center;
+  width: 680px;
+  height: 680px;
+  border-radius: 48px;  
+  margin: 10px;
+  margin-left: 280px;
+
+}
+
+@media (max-width: 900px) {
+  .image-section1 img {
+    position: relative;
+    top: 600px;
+    left: -56rem;
+    height: 500px;
+  }
+  .image-section1 img {
+    display: none;
+  }
+
+
+}
+@media (max-width: 600px){
+    .lin-btn{
+    width: 400px;
+    }
+  }
+

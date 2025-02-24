@@ -1,39 +1,109 @@
-import React from 'react';
-import  "./SignUp.css" ;
+import React, { useState } from "react";
+import axios from "axios";
+import "./SignUp.css";
 
 const SignUp = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    agree: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    try {
+      const response = await axios.post("/api/User/Register", {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        password: formData.password,
+      });
+      console.log("Success:", response.data);
+      alert("Account created successfully!");
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to create account.");
+    }
+  };
+
   return (
     <div>
       <section className="SignUpPage">
         <div className="containerSignUp">
           <div className="form-sectionSignUp">
-            <h1
-              style={{
-                fontFamily: "'Cormorant Upright'",
-              }}
-            >
+            <h1 style={{ fontFamily: "'Cormorant Upright'" }}>
               Create an Account
             </h1>
             <p>
               Already have an account? <a href="#">Login</a>
             </p>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="input-group">
-                <input placeholder="First name" type="text" />
-                <input placeholder="Last name" type="text" />
+                <input
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder="First name"
+                  type="text"
+                  required
+                />
+                <input
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Last name"
+                  type="text"
+                  required
+                />
               </div>
               <div className="full-width">
-                <input placeholder="Email" type="email" />
+                <input
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email"
+                  type="email"
+                  required
+                />
               </div>
               <div className="full-width password-group">
-                <input placeholder="Password" type="password" />
+                <input
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="Password"
+                  type="password"
+                  required
+                />
                 <img
                   alt="Show Password"
                   src="src/LoginPage/Sign up/mdi_eye-outline (1).svg"
                 />
               </div>
               <div className="full-width password-group">
-                <input placeholder="Confirm Password" type="password" />
+                <input
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  placeholder="Confirm Password"
+                  type="password"
+                  required
+                />
                 <img
                   alt="Show Password"
                   src="src/LoginPage/Sign up/mdi_eye-outline (2).svg"
@@ -42,49 +112,19 @@ const SignUp = () => {
               <div className="checkbox-group">
                 <input
                   id="terms"
-                  style={{
-                    borderColor: "#ff9500",
-                  }}
+                  name="agree"
+                  checked={formData.agree}
+                  onChange={handleChange}
                   type="checkbox"
+                  required
                 />
                 <label htmlFor="terms">
                   You agree to our friendly privacy policy
                 </label>
               </div>
-
-              <div className="lineDive2">
-                <img src="src/LoginPage/login/Line 17.svg" alt="" />
-                <span>or sign up with</span>
-                <img src="src/LoginPage/login/Line 16.svg" alt="" />
-              </div>
-
-              <div className="social-login">
-                <button
-                  className="buttonSing"
-                  style={{
-                    backgroundColor: "white",
-                  }}
-                >
-                  <img
-                    alt="Google Logo"
-                    src="src/LoginPage/Sign up/flat-color-icons_google (2).svg"
-                  />
-                  Google
-                </button>
-                <button
-                  className="buttonSing"
-                  style={{
-                    backgroundColor: "white",
-                  }}
-                >
-                  <img
-                    alt="Apple Logo"
-                    src="src/LoginPage/Sign up/mdi_apple (2).svg "
-                  />
-                  Apple
-                </button>
-              </div>
-              <button className="submit-btn">Create an account</button>
+              <button className="submit-btn" type="submit">
+                Create an account
+              </button>
             </form>
           </div>
           <div className="image-section3" />
@@ -92,6 +132,6 @@ const SignUp = () => {
       </section>
     </div>
   );
-}
+};
 
 export default SignUp;
