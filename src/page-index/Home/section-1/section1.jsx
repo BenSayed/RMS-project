@@ -1,7 +1,8 @@
 import React from "react";
 import "./section1.css";
 import MicIcon from "@mui/icons-material/Mic"; // Assuming you want to use this for the microphone icon
-
+ 
+import image1 from "./Rectangle 1152.svg";
 const Section1 = () => {
   return (
     <div>
@@ -15,7 +16,7 @@ const Section1 = () => {
         </div>
         <div className="cotiner_img">
           <img
-            src="src/page-index/Home/section-1/Rectangle 1152.svg"
+            src= {image1}
             alt=" erorr"
           />
         </div>
