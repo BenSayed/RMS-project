@@ -26,6 +26,8 @@
   color: #fff4e6;
   margin-bottom: 10px;
   z-index: 1;
+  font-family: "Cormorant Upright", serif;
+
 }
 
 .textconteiner p {
@@ -55,24 +57,29 @@
 
 /* SERCH */
 
-.container {
+.container22 {
   position: relative;
-  top: -588rem;
+  top: -5rem;
+  display: flex;
+  flex-direction: column;
+  
+align-items: center;
 }
 
-.search-bar12 {
+.search-bar{
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff5eb;
   padding: 4px 4px 4px 16px;
   margin-bottom: 16px;
-   border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  margin-top: 45rem;
+  width: 640px;
+  height: 64px;
 }
 
-.search-input12 {
-  width: 640px;
+.search-input{
+  width: 240px;
   height: 46px;
   flex: 1;
   border: none;
@@ -85,11 +92,15 @@
 .button-container {
   display: flex;
   gap: 16px;
+
+
 }
 
 /* Button styles */
 .button {
-  flex: 1;
+  width: 252px;
+  height: 64px;
+ 
   padding: 16px 24px;
   border-radius: 16px;
   font-size: 16px;
@@ -98,6 +109,7 @@
   border: none;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .primary-button {
@@ -107,6 +119,7 @@
   font-family: Inter;
   font-size: 20px;
   text-align: center;
+ 
 }
 
 .secondary-button {
@@ -115,6 +128,7 @@
   font-family: Inter;
   font-size: 20px;
   text-align: center;
+
 }
 
 button.mic-button {
@@ -126,20 +140,22 @@ button.mic-button {
   border-radius: 16px;
   cursor: pointer;
 }
+
 /* Media Queries */
 
 /* For screens with width 984px */
-@media (max-width: 984px) {
+@media  (max-width: 984px)   {
+
   .section1 {
     min-height: 850px;
     height: auto;
   }
   .textconteiner h1 {
-    font-size: 120px;
+    font-size: 120px; 
   }
 
   .textconteiner p {
-    font-size: 24px;
+    font-size: 24px; 
   }
 
   .cotiner_img img {
@@ -148,7 +164,7 @@ button.mic-button {
     margin-top: 0;
   }
 
-  .search-input12 {
+  .search-input {
     width: 500px;
     height: 46px;
     font-size: 15px;
@@ -166,6 +182,7 @@ button.mic-button {
 
 /* For screens with width 646px */
 @media screen and (max-width: 646px) {
+  
   .container {
     margin-top: 30px;
   }
@@ -183,7 +200,7 @@ button.mic-button {
     margin-top: 0;
   }
 
-  .search-input12 {
+  .search-input {
     width: 350px;
     height: 46px;
     font-size: 14px;
@@ -218,7 +235,7 @@ button.mic-button {
     margin-top: 0;
   }
 
-  .search-input12 {
+  .search-input {
     width: 100%;
     font-size: 13px;
     height: 36px;
@@ -254,7 +271,7 @@ button.mic-button {
     height: 40%; /* تقليل حجم الصورة في الشاشات الصغيرة */
   }
 
-  .search-input12 {
+  .search-input {
     width: 250px;
     height: 46px;
     font-size: 12px;

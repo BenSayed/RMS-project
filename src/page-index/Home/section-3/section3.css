@@ -10,13 +10,13 @@
   height: 818px;
 }
 
-.container12 {
+.container {
   text-align: center;
   position: relative;
   top: 1rem;
 }
 
-.heading12 {
+.heading {
   font-size: 96px;
   line-height: 116.26px;
   font-weight: 700;
@@ -24,11 +24,11 @@
   margin-bottom: 5px;
 }
 
-.heading12 span {
+.heading span {
   color: #f68b2e;
 }
 
-.chef-image12 {
+.chef-image {
   margin: 2px auto;
   width: 320px;
   height: 480px;
@@ -39,19 +39,19 @@
   position: relative;
 }
 
-.chef-image12 img {
+.chef-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.chef-image12:hover {
+.chef-image:hover {
   transform: scale(1.02);
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.description12 {
+.description {
   background-color: rgba(255, 222, 176, 0.3);
   border: 1px solid #f68b2e;
   border-radius: 48px;
@@ -64,7 +64,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.chef-image12::after {
+.chef-image::after {
   content: "";
   display: block;
   width: 46px;
@@ -78,15 +78,15 @@
   transform: translateY(-50%);
 }
 
-.chef-image12:hover::after {
+.chef-image:hover::after {
   cursor: pointer;
 }
 
-.chef-image12:hover {
+.chef-image:hover {
   cursor: pointer;
 }
 
-.chef-image12:hover::after {
+.chef-image:hover::after {
   content: "Click to know more";
   color: #f68b2e;
   font-weight: 600;
@@ -97,26 +97,26 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
 
-      .container12{
+      .container{
     position: relative;
   top: -2rem;
   } 
   .section3{
     height: 700px;
   }
-  .heading12 {
+  .heading {
     font-size: 70px;
     line-height: 56px;
     position: relative;
     top: -1rem;
   }
 
-  .chef-image12 {
+  .chef-image {
     width: 250px;
     height: 375px;
   }
 
-  .description12 {
+  .description {
     font-size: 16px;
     max-width: 90%;
     padding: 15px;
@@ -128,11 +128,11 @@
     .section3{
     height: 650px;
   }
-    .container12{
+    .container{
     position: relative;
   top: -2rem;
   }
-  .heading12 {
+  .heading {
     font-size: 40px;
     line-height: 56px;
   }
@@ -143,21 +143,21 @@
   .section3{
     height: 550px;
   }
-    .container12{
+    .container{
     position: relative;
   top: -2rem;
   }
-  .heading12 {
+  .heading {
     font-size: 40px;
     line-height: 44px;
   }
 
-  .chef-image12 {
+  .chef-image {
     width: 200px;
     height: 300px;
   }
 
-  .description12 {
+  .description {
     font-size: 14px;
     max-width: 90%;
     padding: 12px;

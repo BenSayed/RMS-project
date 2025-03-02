@@ -9,8 +9,7 @@
 }
 
 .title {
-    font-family: "Cormorant Upright", serif;
-
+  font-family: "Cormorant Upright", serif;
   font-size: 48px;
   color: var(--coler_2);
   margin-bottom: 10px;

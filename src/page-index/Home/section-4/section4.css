@@ -32,8 +32,6 @@
   gap: 8px;
   margin-bottom: 13px;
   margin-top: 20px;
-  margin-left: 190px;
-  max-width: 923px;
 }
 
 .navbar button {
@@ -46,14 +44,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   flex-grow: 1;
-  width: 180px;
-  height: 67px;
-  font-family: "Inter", serif;
-  font-weight: 500;
-
-  line-height: 19.36px;
-  letter-spacing: 0%;
-  text-align: center;
+  width: 50px;
+  height: 60px;
 }
 
 .navbar button:hover {
@@ -61,108 +53,81 @@
   color: aliceblue;
 }
 
-.cardssSection4 {
+.cards {
   display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  margin-top: 19px;
+  flex-wrap: wrap; /* سيسمح بتوزيع البطاقات بشكل مرن */
   justify-content: center;
-  gap: 26px; /* المسافة بين البطاقات */
-  padding-top: -30px; /* المسافة من النافبار */
-  flex-wrap: wrap; /* يسمح بالتفاف العناصر إذا زاد عددها */
-  cursor: pointer;
 }
 
-.carddSection4 {
-  background-color: #fff4e6; /* لون خلفية البطاقة */
-  border-radius: 48px; /* تدوير الزوايا */
-  box-shadow: 10 10px 10px rgba(0, 0, 0, 0.1); /* الظل */
-  width: 310px; /* عرض البطاقة */
-  height: 381px; /* ارتفاع البطاقة */
-  overflow: hidden; /* قص المحتوى الزائد */
+.card {
+  background-color: #fff4e6;
+  border-radius: 48px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  width: 290px;
+  height: 381px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.carddSection4 img {
-  width: 100%; /* عرض الصورة بالكامل */
-  height: 60%; /* تقليل ارتفاع الصورة إلى 60% من البطاقة */
-  object-fit: cover; /* ملء الصورة دون تشويه */
+.card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
 }
 
-.carddSection4 .contentSection4 {
+.card .content {
   display: flex;
-  height: 38%; /* الجزء الأبيض يمثل 40% من البطاقة */
-  justify-content: space-between; /* توزيع العناصر أفقيًا */
-  align-items: center; /* محاذاة عمودية */
-  padding: 19px; /* الحشوة داخل البطاقة */
+  height: 38%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px;
 }
 
-.carddSection4 .textSection4 {
+.card .text {
   display: flex;
-  flex-direction: column; /* عرض النصوص عموديًا */
-  gap: px; /* المسافة بين النصوص */
+  flex-direction: column;
+  gap: 8px;
 }
 
-.carddSection4 h3 {
-  font-size: 30px; /* حجم عنوان البطاقة */
-  font-family: Cormorant Upright;
-
-  position: relative; /* لجعل الحركات تعمل */
-  top: -3px; /* لتحريك العنوان لأعلى */
-  left: -9px; /* لتحريك العنوان إلى اليمين */
-  text-overflow: ellipsis; /* يضيف ثلاث نقاط (...) إذا تجاوز النص العرض المتاح */
-  white-space: nowrap; /* يمنع التفاف النص إلى السطر التالي */
-  overflow: hidden; /* يخفي أي نص يتجاوز الحد المحدد */
-  margin: 0 0 8px 0; /* إزالة الهوامش العلوية 
-  والجانبية وجعل الهامش السفلي 8px */
+.card h3 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  top: -3px;
+  left: -9px;
+  margin: 0 0 8px 0;
 }
-.carddSection4 p {
-  font-size: 14px; /* حجم النص */
-  /*                font-weight: bold;*/
-  font-family: "Inter", serif;
-  color: black; /* لون النص */
-  margin: 0; /* إزالة الهوامش */
-  margin: -15px 0 0 0;
 
-  line-height: 21px; /* زيادة ارتفاع السطر لتجنب تداخل السطور */
-  word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
-
-  word-wrap: break-word; /* تفعيل لف النص داخل العنصر */
-  width: 100%; /* تأكد من أن النص يأخذ المساحة بالكامل */
-}
-.carddSection4 .starsSection4 {
-  color: #ffb854; /* لون النجوم */
+.card p {
+  font-size: 16px;
   font-weight: bold;
-  color: #ffb854; /* لون النجوم */
-  font-size: 20px; /* حجم النجوم - يمكنك زيادته أو تقليله */
-  position: relative; /* لجعل تأثير التحريك يعمل */
-  top: -10px; /* تحريك النجوم لأسفل - يمكنك تعديل القيمة حسب الحاجة */
+  color: #333;
+  margin: -15px 0 0 0;
+  line-height: 21px;
 }
-.carddSection4 .priceSection4 {
-  font-size: 40px; /* حجم النص */
-  font-weight: bold; /* سمك النص */
-  color: black; /* لون السعر */
+
+.card .price {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
   margin: 0;
-  font-weight: bold; /* سمك النص */
-
-  text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
-
+  text-align: right;
   position: relative;
-  top: 47px; /* لتحريكه لأسفل */
-  left: 30px; /* لتحريكه لليمين */
-  font-family: Cormorant Upright;
+  top: 45px;
+  left: 5px;
 }
-.carddSection4 .heartSection4 {
-  width: 50px;
-  height: 49px;
-  font-size: 11px; /* حجم النص */
-  color: black; /* لون السعر */
 
-  font-weight: bold; /* سمك النص */
-
-  text-align: right; /* اجعليها right أو left أو center حسب الاتجاه المطلوب */
-
+.card .stars {
+  color: #ffb854;
+  font-weight: bold;
+  font-size: 23px;
   position: relative;
-  top: -34px; /* لتحريكه لأسفل */
-  left: -10px; /* لتحريكه لليمين */
+  top: 10px;
 }
 
 .show-all-button {
@@ -172,7 +137,7 @@
   background-color: #ff9500;
   color: black;
   font-size: 16px;
-  font-family: "Inter", serif;
+  font-family: Arial, sans-serif;
   padding: 2px 5px;
   margin: 27px;
   border: none;
@@ -185,9 +150,7 @@
   width: 151px;
   left: 31.5rem;
 }
- .icon-container .svgicon svg{
-  width: 20px;
-}
+
 .show-all-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
@@ -202,9 +165,8 @@
   background-color: black;
   border-radius: 14px;
   margin-left: 8px;
-    font-family: "Inter", serif;
 }
- 
+
 /* استعلامات الوسائط */
 @media (max-width: 1200px) {
   .food-selection h2 {

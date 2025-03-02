@@ -1,5 +1,5 @@
 import React from "react";
-import "./section.css";
+import "./section1.css";
 import MicIcon from "@mui/icons-material/Mic"; // Assuming you want to use this for the microphone icon
 
 const Section1 = () => {
@@ -20,14 +20,15 @@ const Section1 = () => {
           />
         </div>
 
-        <div className="container">
-          <div className="search-bar12">
+        <div className="container22">
+          <div className="search-bar">
             <input
               type="text"
-              className="search-input12"
+              className="search-input"
               placeholder="Search..."
             />
             <button className="mic-button">
+             
               <img src="src/page-index/Home/section-1/Vector.svg" alt="" />
             </button>
           </div>

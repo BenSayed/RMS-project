@@ -1,5 +1,5 @@
-import React from "react";
-import "./section4.css";
+import React from 'react';
+import  "./section4.css" ;
 const Section4 = () => {
   return (
     <div>
@@ -19,69 +19,103 @@ const Section4 = () => {
             <button>Beverages</button>
           </div>
 
-          <div className="cardss">
-            <Card
-              imgSrc="src/page-index/MenuPage/Rectangle 1153 (1).svg"
-              altText="Wagyu Steak"
-              title="Wagyu Steak"
-              description="250g of lean steak with sous smashed potato or rice"
-              price="78$"
-              heartImg="src/page-index/MenuPage/solar_heart-bold (2).svg"
-            />
-            <Card
-              imgSrc="src/page-index/MenuPage/Rectangle 1153 (1).svg"
-              altText="Lobster Roll"
-              title="Lobster Roll"
-              description="250g of lean steak with sous smashed potato or rice"
-              price="28$"
-              heartImg="src/page-index/MenuPage/solar_heart-bold (2).svg"
-            />
-            <Card
-              imgSrc="src/page-index/MenuPage/Rectangle 1153 (1).svg"
-              altText="Cheesecake"
-              title="Cheesecake"
-              description="250g of lean steak with sous smashed potato or rice"
-              price="98$"
-              heartImg="src/page-index/MenuPage/solar_heart-bold (2).svg"
-            />
-            <Card
-              imgSrc="src/page-index/MenuPage/Rectangle 1153 (1).svg"
-              altText="Cheesecake"
-              title="Cheesecake"
-              description="250g of lean steak with sous smashed potato or rice"
-              price="110$"
-              heartImg="src/page-index/MenuPage/solar_heart-bold (2).svg"
-            />
+          <div className="cards">
+            <div className="card">
+              <img
+                src="src/page-index/Home/section-4/1.svg"
+                alt="Wagyu Steak"
+              />
+              <div className="content">
+                <div className="text">
+                  <h3>Wagyu Steak</h3>
+                  <p>
+                    Wagyu Steak Wagyu Steak <br />
+                    Steak Wagyu Steak
+                  </p>
+                  <div className="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;   
+                  </div>
+                </div>
+                <div className="price">68$</div>
+              </div>
+            </div>
+
+            <div className="card">
+              <img
+                src="src/page-index/Home/section-4/2.svg"
+                alt="Lobster Roll"
+              />
+              <div className="content">
+                <div className="text">
+                  <h3>Wagyu Steak</h3>
+                  <p>
+                    Wagyu Steak Wagyu Steak <br />
+                    Steak Wagyu Steak
+                  </p>
+                  <div className="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                  </div>
+                </div>
+                <div className="price">68$</div>
+              </div>
+            </div>
+
+            <div className="card">
+              <img
+                src="src/page-index/Home/section-4/3.svg"
+                alt="Pasta Carbonara"
+              />
+              <div className="content">
+                <div className="text">
+                  <h3>Wagyu Steak</h3>
+                  <p>
+                    Wagyu Steak Wagyu Steak <br />
+                    Steak Wagyu Steak
+                  </p>
+                  <div className="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                  </div>
+                </div>
+                <div className="price">68$</div>
+              </div>
+            </div>
+
+            <div className="card">
+              <img src="src/page-index/Home/section-4/4.svg" alt="Cheesecake" />
+              <div className="content">
+                <div className="text">
+                  <h3>Wagyu Steak</h3>
+                  <p>
+                    Wagyu Steak Wagyu Steak <br />
+                    Steak Wagyu Steak
+                  </p>
+                  <div className="stars">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                  </div>
+                </div>
+                <div className="price">68$</div>
+              </div>
+            </div>
           </div>
+
           <a href="#" className="show-all-button">
             <span>Show All</span>
             <div className="icon-container">
-              <img src="src/page-index/Home/section-4/Group (1).svg " alt="" />
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12 2L10.59 3.41 16.17 9H2v2h14.17l-5.58 5.59L12 18l8-8-8-8z" />
+              </svg>
             </div>
           </a>
         </div>
       </section>
     </div>
   );
-};
-const Card = ({ imgSrc, altText, title, description, price, heartImg }) => {
-  return (
-    <div className="carddSection4">
-      <img src={imgSrc} alt={altText} />
-      <div className="contentSection4">
-        <div className="textSection4">
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <div className="starsSection4">
-            &#9733; &#9733; &#9733; &#9733; &#9733;
-          </div>
-        </div>
-        <div className="priceSection4">{price}</div>
-        <div className="heartSection4">
-          <img src={heartImg} alt={altText} />
-        </div>
-      </div>
-    </div>
-  );
-};
+}
+
 export default Section4;

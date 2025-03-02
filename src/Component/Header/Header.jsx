@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-
+import LogoImage from "/public/IMEG/Logo.png" ;
 const Header = () => {
   const [activeLink, setActiveLink] = useState("");
 
@@ -20,7 +20,7 @@ const Header = () => {
 
       <div className="logo-container">
         <img
-          src="public/IMEG/Logo.png"
+          src={LogoImage}
           alt="Flavor Haven Logo"
           className="logo"
         />

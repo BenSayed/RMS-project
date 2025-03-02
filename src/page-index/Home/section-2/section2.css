@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
 .section2 {
   color: #fff;
   text-align: center;
   padding: 60px 0;
   position: relative;
-
+ 
   width: 100%;
   min-height: 450px; /* الحد الأدنى للارتفاع */
   height: auto; /* السماح للارتفاع بالتكيف مع المحتوى */
@@ -29,7 +28,6 @@ h2 {
   width: 100%;
   gap: 48px;
   flex-wrap: wrap;
-  font-family: "Cormorant Upright", sans-serif;
 }
 
 .feature {
@@ -45,7 +43,6 @@ h2 {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: "Cormorant Upright", sans-serif;
 }
 
 img.no-style {
@@ -83,7 +80,6 @@ img.no-style {
 .feature p {
   font-size: 32px;
   margin-top: 10px;
-  font-family: "Cormorant Upright", sans-serif;
 }
 
 /* استعلامات الوسائط للأجهزة الصغيرة */
