@@ -3,7 +3,7 @@ import "./Login.css";
 import Header from "/src/Component/Header/Header";
 import axios from "axios";
 
-import "Mdi_eye-outline.svg";
+import eyeImage from "./Mdi_eye-outline.svg";
 
 function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -63,7 +63,7 @@ function Login() {
                 />
                 <img
                   className="eye-icon"
-                  src="src/LoginPage/login/Mdi_eye-outline.svg"
+                  src={eyeImage}
                   alt="eye icon"
                   onClick={togglePassword}
                 />
