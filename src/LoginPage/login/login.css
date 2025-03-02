@@ -1,53 +1,60 @@
 .sectionlogin {
-  height: 650px;
+
 }
 
+.sectionlogin1{
+ padding: 44px;
+}
 .PageLogin {
-  margin: 0;
-  font-family: Arial, sans-serif;
+   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
-}
+ }
 
 .PageLogincontainer {
   display: flex;
-  width: 94%;
-  height: 100%;
+  width: 1312px;
+  height: 660px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 33px;
   overflow: hidden;
   background-color: #fff4e6;
-  padding-top: 22px;
-  padding-bottom: 22px;
+ padding: 24px;
+ gap: 26px;
+align-items: center ;
+ 
 }
 
+.border{
+  border: 1px solid crimson;
+}
 .PageLoginform-section {
-  position: relative;
-
-  padding: 70px;
-  flex: 0.8;
-  gap: 38px;
+  width: 520px;
+  height: 526px;
+ display: flex;
+ flex-direction: column;
+  
+  
 }
-
-.PageLoginform-section h1 {
-  font-size: 64px;
-  margin-bottom: 8px;
-  color: #151716;
+.formatcontenteeInput{
+  width: 520px;
+ 
 }
-
-p {
-  padding-bottom: 20px;
+.formatcontenteeInput h3{
+  font-family: "Inter", serif;
+font-weight: 400;
+font-size: 14px;
+line-height: 16.94px;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+ color: #FF9500;
+text-decoration-thickness: Auto;
+ margin-top: -10px;
+ margin-bottom: 15px;
 }
-
-.PageLoginform-section a {
-  color: #ff9500;
-  text-decoration: none;
-  border-bottom: 2px solid #ff9500;
-  padding-bottom: 0.2px;
-}
-
+ 
 .PageLoginform-section input[type="email"],
 .PageLoginform-section input[type="password"] {
   width: 520px;
@@ -71,7 +78,7 @@ p {
 .password-container .eye-icon {
   position: absolute;
   top: 27px;
-  right: 40px;
+  right: 20px;
   transform: translateY(-50%);
   cursor: pointer;
   width: 25px;
@@ -153,7 +160,7 @@ p {
 
 .PageLoginform-section .login-btn {
   margin-top: 20px;
-  width: 100%;
+width: 520px;
   height: 59px;
   padding: 12px;
   background-color: #ff9500;
@@ -177,24 +184,24 @@ p {
   background-color: #e65a00;
 }
 
-.image-section0 img {
-  position: relative;
-  align-items: end;
-  left: -18.5rem;
-  bottom: 0.3rem;
-  width: 1110px;
-  height: 580px;
-  gap: 0px;
+.image-section020 {
+   
   border-radius: 48px;
-  opacity: 0px;
-  background-size: cover;
-  background-position: center;
 }
+
+.image-section020 img{
+  width: 670px;
+  height: 680px;
+  border-radius: 48px;
+  
+}
+
 
 .lineDive {
   display: flex;
   align-items: center;
   justify-items: center;
+  margin-left: -10px;
 }
 
 .lineDive img {
@@ -206,8 +213,44 @@ p {
   font-size: 16px;
   font-family: "Inter", serif;
   color: #151716d3;
+  white-space: nowrap;
 }
 
+.welcome-text {
+  width: 520px;
+height: 110px;
+ 
+
+}
+
+.welcome-text h1{
+  font-family: "Cormorant Upright", serif;
+
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77.5px;
+  letter-spacing: 0%;
+  color: #151716;
+}
+.welcome-text p{
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0%;
+  font-family: "Inter", serif;
+  color: #151716;
+  margin-top: -15px;
+}
+
+.welcome-text a{
+  color: #FF9500
+}
+.formatcontentee{
+  width: 520px;
+height: 384px;
+ 
+}
 /* Responsive design */
 
 @media (max-width: 900px) {

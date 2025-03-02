@@ -10,8 +10,8 @@
   --coler_2: #ff9500;
 }
 * {
-  padding-right: 88px;
-  padding-left: 88px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin: 2px;
   padding: 0;
   box-sizing: border-box;

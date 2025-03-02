@@ -7,7 +7,7 @@ import Header from "./Component/Header/Header";
 import Login from "./LoginPage/login/login";
 import SignUp from "./LoginPage/Sign up/SignUp.jsx";
 import ExploreMenu from "./page-index/MenuPage/ExploreMenu";
-import FOOTER from "./Component/FOOTER/FOOTER.jsx";
+// import FOOTER from "./Component/FOOTER/FOOTER.jsx";
 import Reservation from "./page-index/Reservation/reservation";
 import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
 import SalesPages from "./Sales pages/pageSales1/SalesPages";
@@ -19,11 +19,13 @@ import DeliverypageDeteils from "./page-index/Delivery pages/DeliverypageDeteils
 import ForgetPassword from "./LoginPage/ForgetPassword/ForgetPassword";
 import EmailConfirmation from "./LoginPage/ConfirmEmail/ConfirmEmail";
 import PasswordRecovery from "./LoginPage/PasswordRecovery/PasswordRecovery";
+import DeliveryHistory from "./page-index/Delivery pages/DeliveryHistory/DeliveryHistory";
+import Login1 from "./LoginPage/login/login1";
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* <Countact /> */}
       {/* <WaitingPage/> */}
       {/* <PageErorr500/> */}
@@ -39,16 +41,18 @@ function App() {
       {/* <EmailConfirmation/> */}
       {/* <PasswordRecovery/> */}
       {/* <MenuItem />  */}
-      {/* <Reservation />
-      {/* <MenuComponent/> */}
-      {/* <Login/> */}
+       {/* <Reservation /> */}
+     {/* <MenuComponent/>  */}
+     {/* <Login1/> */}
+      <Login/>
       {/* <DeliveryHome /> */}
+      {/* <DeliveryHistory/> */}
       {/* <DeliverypageDeteils /> */}
-      <SignUp/>
+      {/* <SignUp/> */}
       {/* <ExploreMenu /> */}
       {/* <ChefuiPage/> */}
       {/* <DeliveryLogin/> */}
-      {/* <FOOTER/> */}
+      <FOOTER/>
     </>
   );
 }
