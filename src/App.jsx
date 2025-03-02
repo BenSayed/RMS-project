@@ -34,7 +34,7 @@ function App() {
       {/* <ExploreMenu /> */}
       {/* <ChefuiPage/> */}
       {/* <DeliveryLogin/> */}
-      <FOOTER/>
+      {/* <FOOTER/> */}
     </>
   );
 }
