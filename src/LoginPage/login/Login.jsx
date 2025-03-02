@@ -4,6 +4,7 @@ import Header from "/src/Component/Header/Header";
 import axios from "axios";
 
 import eyeImage from "./Mdi_eye-outline.svg";
+import Recting from "./src/LoginPage/login/Rectangle 1162.svg";
 
 function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -96,7 +97,7 @@ function Login() {
             </div>
 
             <div className="image-section020  ">
-           <img src="src/LoginPage/login/Rectangle 1162.svg" alt="" />
+           <img src={Recting} alt="" />
             </div>
           </div>
         </div>
