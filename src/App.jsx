@@ -1,4 +1,4 @@
-import FOOTER from "./Component/FOOTER/FOOTER";
+import FOOTER from "./Component/Footer/FOOTER";
 import Header from "./Component/Header/Header";
 import Login from "./LoginPage/login/login";
 
@@ -34,7 +34,7 @@ function App() {
       {/* <ExploreMenu /> */}
       {/* <ChefuiPage/> */}
       {/* <DeliveryLogin/> */}
-      {/* <FOOTER/> */}
+      <FOOTER/>
     </>
   );
 }
