@@ -1,5 +1,8 @@
 import React from 'react';
 import  "./section2.css" ; 
+import  image22 from "./33.svg" ;
+import  image23 from "./22.svg" ;
+import  image24 from "./11.svg" ;
 const Section2 = () => {
   return (
     <section className='section2'>
@@ -9,7 +12,7 @@ const Section2 = () => {
           <div className="feature">
             <img
               className="no-shadow"
-              src="src/page-index/Home/section-2/33.svg"
+              src= {image22}
               alt="Chef Icon"
             />
             <p>
@@ -20,7 +23,7 @@ const Section2 = () => {
           <div className="feature">
             <img
               className="no-shadow"
-              src="src/page-index/Home/section-2/22.svg"
+              src={image23}
               alt="Ingredients Icon"
             />
             <p>
@@ -31,7 +34,7 @@ const Section2 = () => {
           <div className="feature">
             <img
               className="no-style "
-              src="src/page-index/Home/section-2/11.svg"
+              src={image24}
               alt="Service Icon"
             />
             <p>

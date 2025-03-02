@@ -1,5 +1,6 @@
 import React from 'react';
 import "./section3.css" ;
+import  image32 from "./Rectangle 1156.svg" ;
 const Section3 = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ const Section3 = () => {
           </h1>
           <div className="chef-image">
             <img
-              src="src/page-index/Home/section-3/Rectangle 1156.svg"
+              src={image32 }
               alt="Chef Image"
             />
           </div>

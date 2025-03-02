@@ -1,5 +1,10 @@
 import React from 'react';
 import  "./section4.css" ;
+import  image31 from "./1.svg" ;
+import  image32 from "./2.svg" ;
+import  image33 from "./3.svg" ;
+import  image34 from "./4.svg" ;
+
 const Section4 = () => {
   return (
     <div>
@@ -22,7 +27,7 @@ const Section4 = () => {
           <div className="cards">
             <div className="card">
               <img
-                src="src/page-index/Home/section-4/1.svg"
+                src={image31}
                 alt="Wagyu Steak"
               />
               <div className="content">
@@ -42,7 +47,7 @@ const Section4 = () => {
 
             <div className="card">
               <img
-                src="src/page-index/Home/section-4/2.svg"
+              src={image32}
                 alt="Lobster Roll"
               />
               <div className="content">
@@ -62,7 +67,7 @@ const Section4 = () => {
 
             <div className="card">
               <img
-                src="src/page-index/Home/section-4/3.svg"
+              src={image33}
                 alt="Pasta Carbonara"
               />
               <div className="content">
@@ -81,7 +86,7 @@ const Section4 = () => {
             </div>
 
             <div className="card">
-              <img src="src/page-index/Home/section-4/4.svg" alt="Cheesecake" />
+              <img src={image34} alt="Cheesecake" />
               <div className="content">
                 <div className="text">
                   <h3>Wagyu Steak</h3>
