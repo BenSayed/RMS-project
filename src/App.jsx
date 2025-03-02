@@ -1,3 +1,4 @@
+import Home from "./page-index/Home/Home";
 import Header from "./Component/Header/Header";
 import Login from "./LoginPage/login/Login";
 
@@ -11,7 +12,7 @@ function App() {
       {/* <WaitingPage/> */}
       {/* <PageErorr500/> */}
       {/* <Erorr404/> */}
-      {/* <Home /> */}
+      <Home />
       {/* <OrderPage/> */}
       {/* <App9/> */}
       {/* <SalesPages/> */}
@@ -25,7 +26,7 @@ function App() {
        {/* <Reservation /> */}
      {/* <MenuComponent/>  */}
      {/* <Login1/> */}
-      <Login/>
+      {/* <Login/> */}
       {/* <DeliveryHome /> */}
       {/* <DeliveryHistory/> */}
       {/* <DeliverypageDeteils /> */}
