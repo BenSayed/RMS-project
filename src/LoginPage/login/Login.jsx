@@ -4,7 +4,7 @@ import Header from "/src/Component/Header/Header";
 import axios from "axios";
 
 import eyeImage from "./Mdi_eye-outline.svg";
-import Recting from "./src/LoginPage/login/Rectangle 1162.svg";
+import Recting from "./Rectangle 1162.svg";
 
 function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
