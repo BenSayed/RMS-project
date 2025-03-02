@@ -15,7 +15,7 @@
 .PageLogincontainer {
   display: flex;
   width: 1312px;
-  height: 660px;
+  height: 620px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 33px;
   overflow: hidden;
@@ -190,8 +190,8 @@ width: 520px;
 }
 
 .image-section020 img{
-  width: 670px;
-  height: 680px;
+  width: 640px;
+  height:610px;
   border-radius: 48px;
   
 }
@@ -218,7 +218,7 @@ width: 520px;
 
 .welcome-text {
   width: 520px;
-height: 110px;
+height: 120px;
  
 
 }
@@ -240,7 +240,7 @@ height: 110px;
   letter-spacing: 0%;
   font-family: "Inter", serif;
   color: #151716;
-  margin-top: -15px;
+  margin-top: -6px;
 }
 
 .welcome-text a{
