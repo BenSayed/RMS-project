@@ -1,220 +1,307 @@
+
 import React from "react";
 import "./menu.css";
+import Banner from "../../Banar/banarMenu";
+const menuItems = Array(8).fill({
+  name: "Wagyu Steak",
+  description: "250g of lean steak with sous and smashed potato or rice",
+  price: "68$",
+  rating: 5,
+  heartImg: "src/page-index/MenuPage/Explore Menu/solar_heart-bold (2).svg",
+});
+
 const MenuComponent = () => {
   return (
-    <div className="mune-cont">
-      <div className="container77">
-        {/* Header Section */}
-        <div className="header2">
-          <div className="content2">
-            <h1>Royal Lunch Offer</h1>
-            <ul>
-              <li>
-                <strong>Appetizer:</strong> Shrimp cocktail with cocktail sauce.
-              </li>
-              <li>
-                <strong>Main Course:</strong> Seabass fillet with lemon butter
-                sauce, served with sautéed vegetables and saffron rice.
-              </li>
-              <li>
-                <strong>Dessert:</strong> Authentic Italian tiramisu.
-              </li>
-              <li>
-                <strong>Drink:</strong> Lemonade with mint or sparkling water.
-              </li>
-            </ul>
-          </div>
-          <div className="price-section2">
-            <img
-              src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-              alt="Lunch Offer Image"
-            />
-            <p className="price2">84$</p>
-            <a href="#" className="order-btn2">
-              Order Now
-            </a>
-          </div>
-        </div>
+<div>
+<Banner />
+    <div className="menu-container">
+    
+      <h2>Explore Menu</h2>
 
-        {/* Explore Menu Section */}
-        <div className="menu-section2">
-          <h2>Explore Menu</h2>
-          <div className="cards2">
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
               <img
                 src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                alt="Wagyu Steak"
+                alt=""
               />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
-                </div>
-                <div className="price2">68$</div>
-              </div>
             </div>
-
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
-              <img
-                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                alt="Lobster Roll"
-              />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
                 </div>
-                <div className="price2">68$</div>
-              </div>
-            </div>
-
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
-              <img
-                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                alt="Pasta Carbonara"
-              />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
-                </div>
-                <div className="price2">68$</div>
-              </div>
-            </div>
-
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
-              <img src="./Rectangle 1153.svg" alt="Cheesecake" />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
-                </div>
-                <div className="price2">68$</div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Top Deals Section */}
-        <div className="menu-section2">
-          <h2>Top Deals</h2>
-          <div className="cards2">
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
-              <img
-                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                alt="Wagyu Steak"
-              />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
-                </div>
-                <div className="price2">68$</div>
-              </div>
-            </div>
-
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
-              <img
-                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                alt="Lobster Roll"
-              />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
-                </div>
-                <div className="price2">68$</div>
-              </div>
-            </div>
-
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
-              <img
-                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                alt="Pasta Carbonara"
-              />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
-                </div>
-                <div className="price2">68$</div>
-              </div>
-            </div>
-
-            <div className="card2">
-              <div className="heart2">
-                <img
-                  src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                  alt="Lobster Roll"
-                />
-              </div>
-              <img
-                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
-                alt="Cheesecake"
-              />
-              <div className="content2">
-                <div className="text2">
-                  <h3>Wagyu Steak</h3>
-                  <p>250g grilled wagyu with sauce and sides</p>
-                  <div className="stars2">★ ★ ★ ★ ★</div>
-                </div>
-                <div className="price2">68$</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
+      <h2>Top Deals</h2>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt=""
+              />
+            </div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
+                </div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2>Bestsellers</h2>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt=""
+              />
+            </div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
+                </div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2>Main Courses</h2>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt=""
+              />
+            </div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
+                </div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2>Appetizers</h2>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt=""
+              />
+            </div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
+                </div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2>Seafood</h2>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt=""
+              />
+            </div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
+                </div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2>Desserts</h2>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt=""
+              />
+            </div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
+                </div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2>Beverages</h2>
+      <div className="menu-grid">
+        {menuItems.slice(4).map((item, index) => (
+          <div key={index} className="menu-card">
+            <div className="image-placeholder">
+              <img
+                src="src/page-index/MenuPage/Explore Menu/Rectangle 1153.svg"
+                alt=""
+              />
+            </div>
+            <div className="menu-info">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="heart">
+                  <img src={item.heartImg} />
+                </div>
+              <div className="menu-footer">
+                <span className="star6">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <img
+                        key={i}
+                        src="src/page-index/MenuPage/Explore Menu/Vector (4).svg"
+                        alt="star"
+                      />
+                    ))}
+                </span>
+                <span className="price4">{item.price}</span>
+                
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="cart-icon"></div>
     </div>
-  );
-};
 
+
+</div> 
+ );
+};
 export default MenuComponent;

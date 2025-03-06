@@ -1,6 +1,7 @@
 import Home from "./page-index/Home/Home";
 import Header from "./Component/Header/Header";
 import Login from "./LoginPage/login/Login";
+import MenuComponent from "./page-index/MenuPage/Explore Menu/explor";
 
  
 
@@ -12,7 +13,7 @@ function App() {
       {/* <WaitingPage/> */}
       {/* <PageErorr500/> */}
       {/* <Erorr404/> */}
-      <Home />
+      {/* <Home /> */}
       {/* <OrderPage/> */}
       {/* <App9/> */}
       {/* <SalesPages/> */}
@@ -24,7 +25,7 @@ function App() {
       {/* <PasswordRecovery/> */}
       {/* <MenuItem />  */}
        {/* <Reservation /> */}
-     {/* <MenuComponent/>  */}
+     <MenuComponent/> 
      {/* <Login1/> */}
       {/* <Login/> */}
       {/* <DeliveryHome /> */}
